@@ -85,11 +85,19 @@
         },
         {
             "key": "website.powertools.http",
-            "value": "http://accstorefront.clwfyft1x1-scpiprodu1-d1-public.model-t.cc.commerce.ondemand.com/yb2bacceleratorstorefront"
+            "value": "http://accstorefront.clwfyft1x1-scpiprodu1-d1-public.model-t.cc.commerce.ondemand.com/powertools"
         },
         {
             "key": "website.powertools.https",
-            "value": "https://accstorefront.clwfyft1x1-scpiprodu1-d1-public.model-t.cc.commerce.ondemand.com/yb2bacceleratorstorefront"
+            "value": "https://accstorefront.clwfyft1x1-scpiprodu1-d1-public.model-t.cc.commerce.ondemand.com/powertools"
+        },
+        {
+            "key": "website.apparel.http",
+            "value": "http://accstorefront.clwfyft1x1-scpiprodu1-d1-public.model-t.cc.commerce.ondemand.com/apparel"
+        },
+        {
+            "key": "website.apparel.https",
+            "value": "https://accstorefront.clwfyft1x1-scpiprodu1-d1-public.model-t.cc.commerce.ondemand.com/apparel"
         },
         {
             "key": "keygen.customer.sap_customer_id.start",
