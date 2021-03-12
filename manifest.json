@@ -211,11 +211,6 @@
             "template": "yacceleratorstorefront"
         },
         {
-            "addon": "assistedservicestorefront",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
             "addon": "ordermanagementaddon",
             "storefront": "yb2bacceleratorstorefront",
             "template": "yacceleratorstorefront"
