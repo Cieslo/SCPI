@@ -146,7 +146,7 @@
             "template": "yacceleratorstorefront"
         },
         {
-            "addon": "assistedservicestorefront",
+            "addon": "commerceorgsamplesaddon",
             "storefront": "yacceleratorstorefront",
             "template": "yacceleratorstorefront"
         },
