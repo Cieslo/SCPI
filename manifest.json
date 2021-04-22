@@ -71,7 +71,12 @@
         "sapcoretest",
         "sapcustomerb2b",
         "sapcustomerb2c",
-        "payment"
+        "payment",
+ 
+  		"sapinvoicebol",
+		"sapinvoicefacades",
+		"sapinvoiceservices",
+		"sapinvoiceaddon"      
     ],
     "properties": [
         {
@@ -222,6 +227,11 @@
         },
         {
 	        "addon":"accountsummaryaddon",
+	        "storefront":"yb2bacceleratorstorefront",
+	        "template":"yacceleratorstorefront"
+        },
+        {
+	        "addon":"sapinvoiceaddon",
 	        "storefront":"yb2bacceleratorstorefront",
 	        "template":"yacceleratorstorefront"
         },
