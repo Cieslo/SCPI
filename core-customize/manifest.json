@@ -181,7 +181,8 @@
 "sapcpicrmreturnorder",
 "sapcpicrmb2breturnorder",
 "sapcpicrmibase",
-"sapcpicrminvoice"
+"sapcpicrminvoice",
+"ECP3561Workaround"
 
    ],   
 "properties": [
