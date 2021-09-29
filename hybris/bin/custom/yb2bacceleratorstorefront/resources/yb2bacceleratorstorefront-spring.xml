@@ -16,7 +16,13 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-	<bean id="defaultCustomerInterceptor" class="com.sap.hybris.sapcustomerb2c.outbound.CustomCustomerInterceptor">
+	<bean id="customCustomerInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
+		<property name="interceptor" ref="customCustomerInterceptor" />
+		<property name="typeCode" value="Customer" />
+		<property name="order" value="5000" />
+	</bean>
+
+	<bean id="customCustomerInterceptor" class="com.sap.hybris.sapcustomerb2c.outbound.CustomCustomerInterceptor">
 		<property name="storeSessionFacade" ref="storeSessionFacade" />
 		<property name="customerExportService" ref="customerExportService" />
 		<property name="baseStoreService" ref="baseStoreService" />
