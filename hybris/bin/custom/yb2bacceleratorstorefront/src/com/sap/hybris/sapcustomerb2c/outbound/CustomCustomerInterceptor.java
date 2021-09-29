@@ -40,4 +40,21 @@ public class CustomCustomerInterceptor extends DefaultCustomerInterceptor{
 
 	  }
 
+	  @Override
+	  protected Set<String> getMonitoredAttributes() {
+
+		  Set<String> monitoredAttributes = new HashSet<>();
+
+		  monitoredAttributes.add(CustomerModel.UID);
+		  monitoredAttributes.add(CustomerModel.CUSTOMERID);
+		  //monitoredAttributes.add(CustomerModel.SAPCONTACTID);
+		  monitoredAttributes.add(CustomerModel.NAME);
+		  monitoredAttributes.add(CustomerModel.SESSIONLANGUAGE);
+		  monitoredAttributes.add(CustomerModel.TITLE);
+		  monitoredAttributes.add(CustomerModel.DEFAULTSHIPMENTADDRESS);
+
+		  return monitoredAttributes;
+
+		  }
+	
 }

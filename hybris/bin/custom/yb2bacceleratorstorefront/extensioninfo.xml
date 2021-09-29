@@ -237,7 +237,8 @@
         
         
         <requires-extension name="yacceleratorfacades"/>
-                                                                                                                                                                		
+ 
+ 		<requires-extension name="sapcustomerb2c"/>                                                                                                                                                               		
         
         
         
