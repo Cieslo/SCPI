@@ -1,5 +1,15 @@
 package com.sap.hybris.sapcustomerb2c.outbound;
 
+import de.hybris.platform.commercefacades.storesession.impl.DefaultStoreSessionFacade;
+import de.hybris.platform.core.model.user.CustomerModel;
+import de.hybris.platform.servicelayer.interceptor.InterceptorContext;
+import de.hybris.platform.servicelayer.interceptor.InterceptorException;
+import de.hybris.platform.servicelayer.interceptor.ValidateInterceptor;
+import de.hybris.platform.store.services.BaseStoreService;
+import org.apache.log4j.Logger;
+
+import java.util.HashSet;
+import java.util.Set;
 import java.lang.Thread;
 
 public class CustomCustomerInterceptor extends DefaultCustomerInterceptor{
