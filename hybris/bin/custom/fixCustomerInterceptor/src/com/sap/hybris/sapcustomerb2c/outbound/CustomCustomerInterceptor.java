@@ -14,7 +14,7 @@ import java.lang.Thread;
 
 public class CustomCustomerInterceptor extends DefaultCustomerInterceptor{
 
-	private static final Logger LOGGER = Logger.getLogger(DefaultCustomerInterceptor.class)
+	private static final Logger LOGGER = Logger.getLogger(CustomCustomerInterceptor.class);
 			
 	  @Override
 	  public void onValidate(final CustomerModel customerModel, final InterceptorContext ctx) throws InterceptorException {
@@ -39,8 +39,8 @@ public class CustomCustomerInterceptor extends DefaultCustomerInterceptor{
 	    
 	    if (getCustomerAddressReplicationUtilityService().isCustomerReplicationRequired(customerModel, getMonitoredAttributes(), ctx)) {
 
-	      final String baseStoreUid = baseStoreService.getCurrentBaseStore() != null
-	              ? baseStoreService.getCurrentBaseStore().getUid() : null;
+	      final String baseStoreUid = getBaseStoreService().getCurrentBaseStore() != null
+	              ? getBaseStoreService().getCurrentBaseStore().getUid() : null;
 	      final String sessionLanguage = getStoreSessionFacade().getCurrentLanguage() != null
 	              ? getStoreSessionFacade().getCurrentLanguage().getIsocode() : null;
 	      getCustomerExportService().sendCustomerData(customerModel, baseStoreUid, sessionLanguage,
