@@ -35,7 +35,7 @@ public class CustomCustomerInterceptor extends DefaultCustomerInterceptor{
 	      return;
 	    }
 
-	    LOGGER.INFO("### STACKTRACE ###\n" + Thread.currentThread().getStackTrace());
+	    
 	    
 	    if (getCustomerAddressReplicationUtilityService().isCustomerReplicationRequired(customerModel, getMonitoredAttributes(), ctx)) {
 
