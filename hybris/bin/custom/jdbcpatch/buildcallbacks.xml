@@ -100,9 +100,9 @@
         <sequential>
             <echo message="WORKAROUND - replacing jdbc driver" level="info"/>        	
             <delete>
-              <fileset file="${ext.core.path}${file.separator}lib${file.separator}dbdriver${file.separator}mssql-jdbc-8.2.1.jre11.jar"/>
+              <fileset file="${ext.platform.path}${file.separator}lib${file.separator}dbdriver${file.separator}mssql-jdbc-8.2.1.jre11.jar"/>
             </delete>
-            <copy todir="${ext.core.path}${file.separator}lib${file.separator}dbdriver">
+            <copy todir="${ext.platform.path}${file.separator}lib${file.separator}dbdriver">
               <fileset file="${ext.jdbcpatch.path}${file.separator}jdbcpatch${file.separator}mssql-jdbc-11.2.0.jre11.jar"/>
             </copy>
         </sequential>
