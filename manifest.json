@@ -16,6 +16,8 @@
         "b2bcommercebackoffice",
         "commerceservicesbackoffice",
         
+        "jdbcpatch",
+
         "yacceleratorcockpits",
         "yacceleratorbackoffice",
         "yacceleratorinitialdata",
