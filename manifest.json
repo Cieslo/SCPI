@@ -1,119 +1,69 @@
 {
-    "commerceSuiteVersion": "2005",
-    "extensionPacks": [
-        {
-            "name": "hybris-commerce-integrations",
-            "version": "2005.0"
-        }
+    "commerceSuiteVersion" : "2211",
+    "extensionPacks" : [
+    {
+        "name" : "hybris-commerce-integrations",
+        "version" : "2211.0"
+    }
     ],
     "extensions": [
-       "ycommercewebservicestest",
-
-       "textfieldconfiguratortemplatebackoffice",
-       "textfieldconfiguratortemplateaddon",
-
-       "smarteditwebservices",
-       "cmssmarteditwebservices",
-       "permissionswebservices",
-       "smarteditaddon",
-       "cmssmartedit",
-       "cmsoccaddon",
-
        "ordermanagementaddon",
-       "orderselfserviceaddon",
-       "ordermanagementwebservices",
-       "b2bordermanagementwebservices",
-       "warehousing",
-       "warehousingbackoffice",
-       "warehousingwebservices",
-       "adaptivesearchsolr",
-       "adaptivesearchbackoffice",
-       "adaptivesearchsamplesaddon",
-       "b2bcommercebackoffice",
-       "commercewebservicescommons",
-       "commerceservicesbackoffice",
-
-       "yacceleratorcockpits",
-       "yacceleratorbackoffice",
-       "yacceleratorinitialdata",
-       "yacceleratorordermanagement",
-       "yacceleratorstorefront",
-       "yaddon",
-       "ycommercewebservices",
-
-       "electronicsstore",
-       "powertoolsstore",
-       "solrfacetsearch",
-       "solrfacetsearchbackoffice",
-       "solrserver",
-       "acceleratorwebservicesaddon",
-       "b2bacceleratoraddon",
-       "commerceorgaddon",
-       "commerceorgsamplesaddon",
-
-       "assistedservicewebservices",
-       "customerticketingaddon",
-       "customersupportbackoffice",
-       "ticketsystembackoffice",
-       "consignmenttrackingbackoffice",
-
-       "rulebuilderbackoffice",
-       "couponbackoffice",
-       "droolsruleengineservices",
-       "couponfacades",
-       "promotionenginesamplesaddon",
-       "consignmenttrackingaddon",
-       "pcmbackofficesamplesaddon",
-       "consignmenttrackingoccaddon",
-       "apiregistryservices",
-       "apiregistrybackoffice",
-       "kymaintegrationservices",
-       "kymaintegrationbackoffice",
-       "odata2webservices",
-       "outboundsync",
-       "outboundsyncbackoffice",
-       "integrationmonitoringbackoffice",
-       "integrationbackoffice",
-       "sapcoreaddon",
-       "sapcoreconfigurationbackoffice",
-       "sapmodelbackoffice",
-       "sapcustomerb2bbackoffice",
-       "ysapcpiomsfulfillment",
-       "sapcpiadapter",
-       "sapcpicustomerexchange",
-       "sapcpicustomerexchangeb2b",
-       "sapcpiorderexchangeoms",
-       "sapcpiorderexchangeomsb2b",
-       "saporderexchangebackoffice",
-       "sapcpiproductexchange",
-       "sapcpireturnsexchange",
-       "sapreturnsexchangeb2b",
-       "sapcpiomsreturnsexchange",
-       "ysapomsreturnprocess",
-       "sapcoretest",
-
-       "assistedservicestorefront",
-
-       "cmswebservices",
-       "cmsbackoffice",
-       "previewpersonalizationweb",
-       "personalizationcmsweb",
-       "personalizationsmartedit",
-       "personalizationpromotionssmartedit",
-       "personalizationsampledataaddon",
-       "personalizationpromotionssampledataaddon",
-       "personalizationpromotions",
-       "personalizationpromotionsweb",
-       "personalizationservicesbackoffice",
-       "personalizationpromotionsbackoffice",
-       "personalizationcmsbackoffice",
-       "personalizationsearchbackoffice",
-       "personalizationsearchsmartedit",
-       "personalizationsearchweb",
-       "personalizationsearchsamplesaddon",
-
-       "yb2bacceleratorstorefront"
-
+      "orderselfserviceaddon",
+      "ordermanagementwebservices",
+      "b2bordermanagementwebservices",
+      "warehousing",
+      "warehousingbackoffice",
+      "warehousingwebservices",
+      "adaptivesearchsolr",
+      "adaptivesearchbackoffice",
+      "adaptivesearchsamplesaddon",
+      "b2bcommercebackoffice",
+      "commerceservicesbackoffice",
+      "yacceleratorcockpits",
+      "yacceleratorinitialdata",
+      "yacceleratorordermanagement",
+      "yacceleratorstorefront",
+      "yaddon",
+      "ycommercewebservices",
+      "powertoolsstore",
+      "solrserver",
+      "acceleratorwebservicesaddon",
+      "b2bacceleratoraddon",
+      "commerceorgaddon",
+      "commerceorgsamplesaddon",
+      "assistedservicestorefront",
+      "assistedservicewebservices",
+      "customerticketingaddon",
+      "customersupportbackoffice",
+      "ticketsystembackoffice",
+      "consignmenttrackingbackoffice",
+      "rulebuilderbackoffice",
+      "couponbackoffice",
+      "droolsruleengineservices",
+      "couponfacades",
+      "promotionenginesamplesaddon",
+      "consignmenttrackingaddon",
+      "pcmbackofficesamplesaddon",
+      "consignmenttrackingoccaddon",
+      "apiregistryservices",
+      "apiregistrybackoffice",
+      "odata2webservices",
+      "outboundsync",
+      "outboundsyncbackoffice",
+      "integrationmonitoringbackoffice",
+      "integrationbackoffice",
+      "sapcoreaddon",
+      "sapcoreconfigurationbackoffice",
+      "sapmodelbackoffice",
+      "sapcustomerb2bbackoffice",
+      "ysapcpiomsfulfillment",
+      "sapcpiadapter",
+      "sapcpicustomerexchange",
+      "sapcpicustomerexchangeb2b",
+      "sapcpiorderexchangeoms",
+      "sapcpiorderexchangeomsb2b",
+      "saporderexchangebackoffice",
+      "sapcpiproductexchange"
    ],   
 "properties": [
     {
@@ -165,14 +115,6 @@
         "value": "true"
     },
     {
-        "key": "occ.rewrite.overlapping.paths.enabled",
-        "value": "true"
-    },
-    {
-        "key": "googleApiKey",
-        "value": ""
-    },
-    {
         "key":"website.electronics.http",
         "value":"http://electronics.clwfyft1x1-scpiprodu1-d3-public.model-t.cc.commerce.ondemand.com/"
     },
@@ -191,7 +133,9 @@
 ],
 "storefrontAddons": [
     {
-        "addons":["commerceorgaddon",
+        "addons":[
+            "b2bacceleratoraddon",
+            "commerceorgaddon",
             "commerceorgsamplesaddon",
             "customerticketingaddon",
             "promotionenginesamplesaddon",
@@ -201,19 +145,11 @@
             "orderselfserviceaddon",
             "consignmenttrackingaddon",
             "sapcoreaddon",
-            "textfieldconfiguratortemplateaddon",
-            "smarteditaddon",
-            "assistedservicestorefront",
-            "personalizationsearchsamplesaddon"]
+            "assistedservicestorefront"]
         ,
-        "storefronts": ["yb2bacceleratorstorefront","yacceleratorstorefront"],
+        "storefronts": ["yacceleratorstorefront"],
         "template": "yacceleratorstorefront"
         
-    },
-    {
-        "addons":["b2bacceleratoraddon"],
-        "storefronts": ["yb2bacceleratorstorefront"],
-        "template": "yacceleratorstorefront"
     }
 ],
 "aspects": [
@@ -281,10 +217,6 @@
                 "contextPath": ""
             },
             {
-                "name": "yb2bacceleratorstorefront",
-                "contextPath": "/yb2bacceleratorstorefront"
-            },
-            {
                 "name": "acceleratorservices",
                 "contextPath": "/acceleratorservices"
             },
@@ -335,18 +267,6 @@
             "contextPath": "/adaptivesearchwebservices"
         },
         {
-            "name": "yacceleratorstorefront",
-            "contextPath": "/yacceleratorstorefront"
-        },
-        {
-            "name": "yb2bacceleratorstorefront",
-            "contextPath": "/yb2bacceleratorstorefront"
-        },
-        {
-            "name": "acceleratorservices",
-            "contextPath": "/acceleratorservices"
-        },
-        {
             "name": "ycommercewebservices",
             "contextPath": "/rest"
         },
@@ -355,18 +275,9 @@
             "contextPath": "/authorizationserver"
         },
         {
-            "name": "cmswebservices",
-            "contextPath": "/cmswebservices"
-        },
-        {
             "name": "permissionswebservices",
             "contextPath": "/permissionswebservices"
         },
-        {
-            "name": "previewwebservices",
-            "contextPath": "/previewwebservices"
-        },
-
         {
             "name": "warehousingwebservices",
             "contextPath": "/warehousingwebservices"
