@@ -36,5 +36,17 @@
 			</attributes>
 		</itemtype>
 -->
+
+		<relation code="B2BCustomer2B2BUnitCMNEdit" localized="false" autocreate="true">
+			<sourceElement type="B2BCustomer" cardinality="one" qualifier="storefrontCMNEditiorforEnabledForB2BCustomer">
+				<description>B2B Customer</description>
+				<modifiers read="true" write="true" search="true" optional="true" />
+			</sourceElement>
+			<targetElement type="B2BUnit" cardinality="many" ordered="true" collectiontype="set" qualifier="storefrontCMNEditiorforEnabledB2BUnits">
+				<description>B2B Unit</description>
+				<modifiers read="true" write="true" search="true" optional="true" />
+			</targetElement>
+		</relation>
+
 	</itemtypes>
 </items>
