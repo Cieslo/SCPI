@@ -1,9 +1,6 @@
 {
     "commerceSuiteVersion": "2205",
     "useCloudExtensionPack": true,
-	"useConfig": {
-    	"solr": {
-        	"location": "config/solr"}},       	    
     "extensions": [
         "acceleratorservices",
         "ordermanagementaddon",
