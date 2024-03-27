@@ -1,6 +1,10 @@
 {
-    "commerceSuiteVersion": "2205",
-    "useCloudExtensionPack": true,
+    "commerceSuiteVersion": "2211",
+    "extensionPacks" : [
+    {
+        "name" : "hybris-commerce-integrations",
+        "version" : "2211.20"
+    }],
     "extensions": [
         "acceleratorservices",
         "ordermanagementaddon",
