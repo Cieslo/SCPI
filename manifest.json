@@ -3,7 +3,7 @@
     "useCloudExtensionPack": true,
 	"useConfig": {
     	"solr": {
-        	"location": "solrcustom"}},       	    
+        	"location": "config/solr"}},       	    
     "extensions": [
         "acceleratorservices",
         "ordermanagementaddon",
