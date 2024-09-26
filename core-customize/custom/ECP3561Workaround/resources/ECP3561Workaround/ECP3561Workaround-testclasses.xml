@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testclasses><ECP3561Workaround><testclass>de.hybris.workaround.service.impl.DefaultECP3561WorkaroundServiceIntegrationTest</testclass><testclass>de.hybris.workaround.jalo.ECP3561WorkaroundTest</testclass></ECP3561Workaround></testclasses>
