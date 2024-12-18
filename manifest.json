@@ -53,7 +53,6 @@
         "couponbackoffice",
         "droolsruleengineservices",
         "couponfacades",
-        "promotionenginesamplesaddon",
         "consignmenttrackingaddon",
         "pcmbackofficesamplesaddon",
         "consignmenttrackingoccaddon",
@@ -163,11 +162,6 @@
         },
         {
             "addon": "customerticketingaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "promotionenginesamplesaddon",
             "storefront": "yacceleratorstorefront",
             "template": "yacceleratorstorefront"
         },
