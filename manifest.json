@@ -27,7 +27,6 @@
         "yacceleratorstorefront",
         "yaddon",
         "ycommercewebservices",
-        "yb2bacceleratorstorefront",
         "apparelstore",
         "electronicsstore",
         "powertoolsstore",
@@ -178,11 +177,6 @@
             "template": "yacceleratorstorefront"
         },
         {
-	        "addon":"commerceorgaddon",
-	        "storefront":"yb2bacceleratorstorefront",
-	        "template":"yacceleratorstorefront"
-        },
-        {
             "addon": "orderselfserviceaddon",
             "storefront": "yacceleratorstorefront",
             "template": "yacceleratorstorefront"
@@ -200,41 +194,6 @@
         {
             "addon": "sapcoreaddon",
             "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "b2bacceleratoraddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "orderselfserviceaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "ordermanagementaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "commerceorgsamplesaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-	        "addon":"accountsummaryaddon",
-	        "storefront":"yb2bacceleratorstorefront",
-	        "template":"yacceleratorstorefront"
-        },
-        {
-	        "addon":"sapinvoiceaddon",
-	        "storefront":"yb2bacceleratorstorefront",
-	        "template":"yacceleratorstorefront"
-        },
-        {
-            "addon": "pcmbackofficesamplesaddon",
-            "storefront": "yb2bacceleratorstorefront",
             "template": "yacceleratorstorefront"
         },
         {
@@ -303,10 +262,6 @@
                 {
                     "name": "yacceleratorstorefront",
                     "contextPath": ""
-                },
-                {
-                    "name": "yb2bacceleratorstorefront",
-                    "contextPath": "/yb2bacceleratorstorefront"
                 },
                 {
                     "name": "acceleratorservices",
