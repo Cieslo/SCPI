@@ -6,14 +6,14 @@ package de.hybris.platform.yb2bacceleratorstorefront.security.impl;
 import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.servicelayer.session.SessionService;
 
+import java.io.Serial;
 import java.io.Serializable;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Required;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.PortResolver;
 import org.springframework.security.web.PortResolverImpl;
@@ -37,6 +37,7 @@ public class WebHttpSessionRequestCache extends HttpSessionRequestCache implemen
 {
 	private static final Logger LOG = Logger.getLogger(WebHttpSessionRequestCache.class);
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 	private static final String REFERER = "referer";
 
@@ -48,7 +49,6 @@ public class WebHttpSessionRequestCache extends HttpSessionRequestCache implemen
 
 	private transient SessionService sessionService;
 
-	@Required
 	public void setSessionService(final SessionService sessionService)
 	{
 		this.sessionService = sessionService;

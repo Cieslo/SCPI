@@ -6,12 +6,11 @@ package de.hybris.platform.yb2bacceleratorstorefront.filters;
 import java.io.IOException;
 import java.util.Map;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.http.HttpMethod;
 import org.springframework.util.PathMatcher;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -63,7 +62,6 @@ public class FileUploadFilter extends OncePerRequestFilter
 		return urlFilterMapping;
 	}
 
-	@Required
 	public void setUrlFilterMapping(final Map<String, MultipartFilter> urlFilterMapping)
 	{
 		this.urlFilterMapping = urlFilterMapping;
@@ -74,7 +72,6 @@ public class FileUploadFilter extends OncePerRequestFilter
 		return pathMatcher;
 	}
 
-	@Required
 	public void setPathMatcher(final PathMatcher pathMatcher)
 	{
 		this.pathMatcher = pathMatcher;

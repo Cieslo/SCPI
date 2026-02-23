@@ -1,9 +1,9 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 
 <spring:htmlEscape defaultHtmlEscape="true"/>
-<spring:url value="/quote/{/quotecode}/newcart/" var="newCartUrl" htmlEscape="false">
+<spring:url value="/quote/{/quotecode}/newcart" var="newCartUrl" htmlEscape="false">
 	<spring:param name="quotecode"  value="${cartData.quoteData.code}"/>
 </spring:url>
 

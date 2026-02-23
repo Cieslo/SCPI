@@ -3,19 +3,19 @@
 <%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
+<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
 <%@ taglib prefix="format" tagdir="/WEB-INF/tags/shared/format" %>
 
 <spring:htmlEscape defaultHtmlEscape="true"/>
-<spring:url value="/my-account/my-quotes/" var="quoteBaseLink" htmlEscape="false" />
-<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/checkout/" var="acceptQuoteAndCheckoutUrl" htmlEscape="false" />
-<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/edit/" var="editQuoteUrl" htmlEscape="false" />
-<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/submit/" var="submitQuoteUrl" htmlEscape="false" />
-<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/approve/" var="approveQuoteUrl" htmlEscape="false" />
-<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/reject/" var="rejectQuoteUrl" htmlEscape="false" />
-<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/requote/" var="requoteUrl" htmlEscape="false" />
+<spring:url value="/my-account/my-quotes" var="quoteBaseLink" htmlEscape="false" />
+<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/checkout" var="acceptQuoteAndCheckoutUrl" htmlEscape="false" />
+<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/edit" var="editQuoteUrl" htmlEscape="false" />
+<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/submit" var="submitQuoteUrl" htmlEscape="false" />
+<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/approve" var="approveQuoteUrl" htmlEscape="false" />
+<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/reject" var="rejectQuoteUrl" htmlEscape="false" />
+<spring:url value="/quote/${ycommerce:encodeUrl(quoteData.code)}/requote" var="requoteUrl" htmlEscape="false" />
 
 
 <div class="cart-header border">

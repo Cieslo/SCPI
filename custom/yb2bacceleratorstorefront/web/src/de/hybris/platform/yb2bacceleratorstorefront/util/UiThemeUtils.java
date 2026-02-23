@@ -18,10 +18,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Required;
+import org.apache.commons.lang3.StringUtils;
 
 
 /**
@@ -168,7 +167,6 @@ public class UiThemeUtils
 		return defaultThemeName;
 	}
 
-	@Required
 	public void setDefaultThemeName(final String defaultThemeName)
 	{
 		this.defaultThemeName = defaultThemeName;
@@ -179,7 +177,6 @@ public class UiThemeUtils
 		return cmsSiteService;
 	}
 
-	@Required
 	public void setCmsSiteService(final CMSSiteService cmsSiteService)
 	{
 		this.cmsSiteService = cmsSiteService;
@@ -190,7 +187,6 @@ public class UiThemeUtils
 		return requiredAddOnsNameProvider;
 	}
 
-	@Required
 	public void setRequiredAddOnsNameProvider(final RequiredAddOnsNameProvider requiredAddOnsNameProvider)
 	{
 		this.requiredAddOnsNameProvider = requiredAddOnsNameProvider;
@@ -201,7 +197,6 @@ public class UiThemeUtils
 		return siteConfigService;
 	}
 
-	@Required
 	public void setSiteConfigService(final SiteConfigService siteConfigService)
 	{
 		this.siteConfigService = siteConfigService;
@@ -212,7 +207,6 @@ public class UiThemeUtils
 		return uiExperienceService;
 	}
 
-	@Required
 	public void setUiExperienceService(final UiExperienceService uiExperienceService)
 	{
 		this.uiExperienceService = uiExperienceService;
@@ -223,7 +217,6 @@ public class UiThemeUtils
 		return uiExperienceViewResolver;
 	}
 
-	@Required
 	public void setUiExperienceViewResolver(final UiExperienceViewResolver uiExperienceViewResolver)
 	{
 		this.uiExperienceViewResolver = uiExperienceViewResolver;

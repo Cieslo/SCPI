@@ -4,8 +4,8 @@
 <%@ attribute name="targetUrl" required="true" type="java.lang.String" %>
 <%@ attribute name="styleClass" required="false" type="java.lang.String"%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 
 <div id="ajaxGrid${index}" class="${fn:escapeXml(styleClass)}"></div>
 <c:if test="${entry.product.multidimensional}">

@@ -9,7 +9,6 @@ import de.hybris.platform.cms2.servicelayer.data.CMSDataFactory;
 import de.hybris.platform.cms2.servicelayer.data.RestrictionData;
 import de.hybris.platform.core.model.product.ProductModel;
 
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.core.convert.converter.Converter;
 
 
@@ -35,7 +34,6 @@ public class RequestContextRestrictionConverter implements Converter<RequestCont
 		return cmsDataFactory;
 	}
 
-	@Required
 	public void setCmsDataFactory(final CMSDataFactory cmsDataFactory)
 	{
 		this.cmsDataFactory = cmsDataFactory;

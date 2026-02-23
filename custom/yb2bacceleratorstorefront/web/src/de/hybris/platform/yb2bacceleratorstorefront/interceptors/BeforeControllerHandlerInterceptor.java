@@ -7,10 +7,9 @@ import de.hybris.platform.acceleratorstorefrontcommons.interceptors.BeforeContro
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
@@ -28,7 +27,6 @@ public class BeforeControllerHandlerInterceptor implements HandlerInterceptor
 		return beforeControllerHandlers;
 	}
 
-	@Required
 	public void setBeforeControllerHandlers(final List<BeforeControllerHandler> beforeControllerHandlers)
 	{
 		this.beforeControllerHandlers = beforeControllerHandlers;

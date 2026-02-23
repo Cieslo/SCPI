@@ -6,13 +6,12 @@ package de.hybris.platform.yb2bacceleratorstorefront.filters;
 import java.io.IOException;
 import java.util.Map;
 
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.util.UrlPathHelper;
 
@@ -29,7 +28,6 @@ public class UrlPathFilter extends OncePerRequestFilter
 		return urlPathHelper;
 	}
 
-	@Required
 	public void setUrlPathHelper(final UrlPathHelper urlPathHelper)
 	{
 		this.urlPathHelper = urlPathHelper;
@@ -50,7 +48,6 @@ public class UrlPathFilter extends OncePerRequestFilter
 		return defaultFilter;
 	}
 
-	@Required
 	public void setDefaultFilter(final Filter defaultFilter)
 	{
 		this.defaultFilter = defaultFilter;

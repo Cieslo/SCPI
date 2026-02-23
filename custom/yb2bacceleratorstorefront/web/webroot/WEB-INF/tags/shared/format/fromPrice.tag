@@ -5,8 +5,8 @@
  Includes the currency symbol for the specific currency.
 --%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"  %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions"  %>
 
 <spring:htmlEscape defaultHtmlEscape="true" />
 
@@ -18,7 +18,7 @@
 		separators (e.g. comma) we change the separator to some random string sequence that will not appear
 		in the formatted currency value.
 		 --%>
-		<spring:theme code="product.price.from" arguments="${priceData.formattedValue}" argumentSeparator="#~/@!£$%^"/>
+		<spring:theme code="product.price.from" arguments="${priceData.formattedValue}" argumentSeparator="#~/@!ï¿½$%^"/>
 	</c:when>
 	<c:otherwise>
 		${fn:escapeXml(priceData.formattedValue)}

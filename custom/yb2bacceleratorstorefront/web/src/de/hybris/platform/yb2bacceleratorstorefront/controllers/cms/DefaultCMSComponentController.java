@@ -8,8 +8,8 @@ import de.hybris.platform.servicelayer.exceptions.AttributeNotSupportedException
 import de.hybris.platform.servicelayer.model.ModelService;
 import de.hybris.platform.yb2bacceleratorstorefront.controllers.ControllerConstants;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

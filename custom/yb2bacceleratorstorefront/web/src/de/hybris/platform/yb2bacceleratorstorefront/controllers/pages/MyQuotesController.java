@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved.
+ * Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved.
  */
 package de.hybris.platform.yb2bacceleratorstorefront.controllers.pages;
 
@@ -37,7 +37,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.log4j.Logger;
@@ -45,8 +45,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
@@ -60,7 +60,7 @@ public class MyQuotesController extends AbstractSearchPageController
 	private static final String MY_QUOTES_CMS_PAGE = "my-quotes";
 	private static final String QUOTE_DETAILS_CMS_PAGE = "quote-detail";
 	private static final String REDIRECT_QUOTE_LIST_URL = REDIRECT_PREFIX + "/" + MY_ACCOUNT_CMS_PAGE + "/" + MY_QUOTES_CMS_PAGE + "/";
-	private static final String REDIRECT_QUOTE_EDIT_URL = REDIRECT_PREFIX + "/quote/%s/edit/";
+	private static final String REDIRECT_QUOTE_EDIT_URL = REDIRECT_PREFIX + "/quote/%s/edit";
 	private static final String PAGINATION_NUMBER_OF_COMMENTS = "quote.pagination.numberofcomments";
 	private static final String ALLOWED_ACTIONS = "allowedActions";
 	private static final String SYSTEM_ERROR_PAGE_NOT_FOUND = "system.error.page.not.found";
@@ -147,7 +147,7 @@ public class MyQuotesController extends AbstractSearchPageController
 					"text.account.manageQuotes.breadcrumb", null, getI18nService().getCurrentLocale()), null));
 			breadcrumbs.add(new Breadcrumb("/" + urlEncode(quoteCode) + "/", getMessageSource().getMessage("breadcrumb.quote.view",
 					new Object[]
-					{ quoteCode }, "Quote {0}", getI18nService().getCurrentLocale()), null));
+					{ Sanitizer.sanitize(quoteCode) }, "Quote {0}", getI18nService().getCurrentLocale()), null));
 			model.addAttribute(WebConstants.BREADCRUMBS_KEY, breadcrumbs);
 			model.addAttribute(ThirdPartyConstants.SeoRobots.META_ROBOTS, ThirdPartyConstants.SeoRobots.NOINDEX_NOFOLLOW);
 

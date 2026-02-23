@@ -69,7 +69,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections4.CollectionUtils;
 import org.hamcrest.CoreMatchers;
 import org.junit.Before;
 import org.junit.Test;
@@ -202,7 +202,7 @@ public class AccountPageControllerTest
 	public void prepare() throws CMSItemNotFoundException
 	{
 
-		final Locale locale = new Locale("en");
+		final Locale locale = Locale.of("en");
 		final List breadcrumbsList = new ArrayList();
 		breadcrumbsList.add(breadcrumb);
 

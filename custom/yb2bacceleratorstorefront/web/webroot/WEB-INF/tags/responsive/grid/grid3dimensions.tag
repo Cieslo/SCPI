@@ -4,9 +4,9 @@
 <%@ attribute name="filterSkus" required="false" type="java.util.List" %>
 <%@ attribute name="readOnly" required="false" type="java.lang.Boolean"%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ taglib prefix="grid" tagdir="/WEB-INF/tags/responsive/grid" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 
 <c:set var="loopIndex" value="0"/>
 <c:set var="loopIndexColor" value="0"/>

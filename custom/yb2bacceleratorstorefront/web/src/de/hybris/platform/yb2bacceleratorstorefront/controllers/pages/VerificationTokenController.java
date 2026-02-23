@@ -11,9 +11,9 @@ import de.hybris.platform.commercefacades.verificationtoken.data.CreateVerificat
 import de.hybris.platform.commercefacades.verificationtoken.exceptions.TooManyActiveVerificationTokensCreatedException;
 import de.hybris.platform.core.enums.SAPUserVerificationPurpose;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.Valid;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

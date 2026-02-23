@@ -1,6 +1,6 @@
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="product" tagdir="/WEB-INF/tags/responsive/product"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 
 <div id="tabreview" class="tabhead">
 	<a href="">${fn:escapeXml(title)}</a> <span class="glyphicon"></span>

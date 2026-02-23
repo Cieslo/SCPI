@@ -19,18 +19,18 @@ import de.hybris.platform.servicelayer.user.exceptions.PasswordPolicyViolationEx
 import de.hybris.platform.util.Sanitizer;
 import de.hybris.platform.yb2bacceleratorstorefront.controllers.ControllerConstants;
 
-import javax.annotation.Resource;
-import javax.validation.Valid;
+import jakarta.annotation.Resource;
+import jakarta.validation.Valid;
 
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
@@ -131,7 +131,7 @@ public class PasswordResetPageController extends AbstractPageController
 			{
 				customerFacade.forgottenPassword(form.getEmail());
 				GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.CONF_MESSAGES_HOLDER,
-						"account.confirmation.forgotten.password.link.sent");
+										"account.confirmation.forgotten.password.link.sent");
 			}
 			catch (final UnknownIdentifierException unknownIdentifierException)
 			{

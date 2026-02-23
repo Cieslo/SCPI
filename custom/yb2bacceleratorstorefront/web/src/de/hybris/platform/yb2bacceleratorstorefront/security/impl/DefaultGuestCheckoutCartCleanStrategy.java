@@ -14,10 +14,9 @@ import de.hybris.platform.yb2bacceleratorstorefront.security.GuestCheckoutCartCl
 import java.util.List;
 import java.util.regex.Pattern;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Required;
+import org.apache.commons.lang3.StringUtils;
 
 
 public class DefaultGuestCheckoutCartCleanStrategy implements GuestCheckoutCartCleanStrategy
@@ -82,7 +81,6 @@ public class DefaultGuestCheckoutCartCleanStrategy implements GuestCheckoutCartC
 				&& getCheckoutCustomerStrategy().isAnonymousCheckout();
 	}
 
-	@Required
 	public void setCheckoutCustomerStrategy(final CheckoutCustomerStrategy checkoutCustomerStrategy)
 	{
 		this.checkoutCustomerStrategy = checkoutCustomerStrategy;
@@ -93,7 +91,6 @@ public class DefaultGuestCheckoutCartCleanStrategy implements GuestCheckoutCartC
 		return cartService;
 	}
 
-	@Required
 	public void setCartService(final CartService cartService)
 	{
 		this.cartService = cartService;
@@ -104,7 +101,6 @@ public class DefaultGuestCheckoutCartCleanStrategy implements GuestCheckoutCartC
 		return sessionService;
 	}
 
-	@Required
 	public void setSessionService(final SessionService sessionService)
 	{
 		this.sessionService = sessionService;
@@ -115,7 +111,6 @@ public class DefaultGuestCheckoutCartCleanStrategy implements GuestCheckoutCartC
 		return userService;
 	}
 
-	@Required
 	public void setUserService(final UserService userService)
 	{
 		this.userService = userService;
@@ -126,7 +121,6 @@ public class DefaultGuestCheckoutCartCleanStrategy implements GuestCheckoutCartC
 		return skipPatterns;
 	}
 
-	@Required
 	public void setSkipPatterns(final List<String> skipPatterns)
 	{
 		this.skipPatterns = skipPatterns;

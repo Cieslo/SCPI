@@ -6,7 +6,7 @@ package de.hybris.platform.yb2bacceleratorstorefront.security;
 import de.hybris.platform.acceleratorstorefrontcommons.security.AbstractAcceleratorAuthenticationProvider;
 import de.hybris.platform.core.Constants;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.AuthenticationException;

@@ -7,7 +7,7 @@ import de.hybris.platform.acceleratorstorefrontcommons.controllers.cms.AbstractC
 import de.hybris.platform.cms2.model.contents.components.AbstractCMSComponentModel;
 import de.hybris.platform.yb2bacceleratorstorefront.controllers.ControllerConstants;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 
 /**

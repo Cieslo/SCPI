@@ -15,14 +15,13 @@ import de.hybris.platform.yb2bacceleratorstorefront.controllers.ControllerConsta
 import java.util.Collections;
 import java.util.List;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
-import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 
 /**
@@ -46,7 +45,7 @@ public class MiniCartController extends AbstractController
 	@Resource(name = "cmsComponentService")
 	private CMSComponentService cmsComponentService;
 
-	@RequestMapping(value = "/cart/miniCart/" + TOTAL_DISPLAY_PATH_VARIABLE_PATTERN, method = RequestMethod.GET)
+	@GetMapping(value = "/cart/miniCart/" + TOTAL_DISPLAY_PATH_VARIABLE_PATTERN)
 	public String getMiniCart(@PathVariable final String totalDisplay, final Model model)
 	{
 		final CartData cartData = cartFacade.getMiniCart();
@@ -67,7 +66,7 @@ public class MiniCartController extends AbstractController
 		return ControllerConstants.Views.Fragments.Cart.MiniCartPanel;
 	}
 
-	@RequestMapping(value = "/cart/rollover/" + COMPONENT_UID_PATH_VARIABLE_PATTERN, method = RequestMethod.GET)
+	@GetMapping(value = "/cart/rollover/" + COMPONENT_UID_PATH_VARIABLE_PATTERN)
 	public String rolloverMiniCartPopup(@PathVariable final String componentUid, final Model model)
 			throws CMSItemNotFoundException
 	{

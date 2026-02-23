@@ -6,12 +6,11 @@ package de.hybris.platform.yb2bacceleratorstorefront.interceptors.beforeview;
 import de.hybris.platform.acceleratorstorefrontcommons.interceptors.BeforeViewHandler;
 import de.hybris.platform.yb2bacceleratorstorefront.security.cookie.CookieNotificationCookieGenerator;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.WebUtils;
 
@@ -57,7 +56,6 @@ public class CookieNotificationBeforeViewHandler implements BeforeViewHandler
 		return cookieNotificationCookieGenerator;
 	}
 
-	@Required
 	public void setCookieNotificationCookieGenerator(final CookieNotificationCookieGenerator cookieNotificationCookieGenerator)
 	{
 		this.cookieNotificationCookieGenerator = cookieNotificationCookieGenerator;

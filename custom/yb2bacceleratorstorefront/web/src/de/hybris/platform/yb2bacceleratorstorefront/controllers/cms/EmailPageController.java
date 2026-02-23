@@ -9,11 +9,12 @@ import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.Abstrac
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.yb2bacceleratorstorefront.util.UiThemeUtils;
 
+import java.io.IOException;
 import java.util.List;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -52,8 +53,8 @@ public class EmailPageController extends AbstractPageController
 	 *            If the page UID is not valid
 	 */
 	@GetMapping(value = "/{emailCmsPageUid}", produces = MediaType.TEXT_HTML_VALUE)
-	public String get(final HttpServletRequest request, final HttpServletResponse response, final ModelAndView modelAndView,
-			@PathVariable final String emailCmsPageUid) throws CMSItemNotFoundException
+	public void get(final HttpServletRequest request, final HttpServletResponse response, final ModelAndView modelAndView,
+			@PathVariable final String emailCmsPageUid) throws CMSItemNotFoundException, IOException
 	{
 		final List<String> jsPaths = uiThemeUtils.getSmartEditAddOnJSPaths(request);
 		final List<String> cssPaths = uiThemeUtils.getSmartEditAddOnCSSPaths(request);
@@ -62,7 +63,9 @@ public class EmailPageController extends AbstractPageController
 		emailPageData.setPageUid(emailCmsPageUid);
 		emailPageData.setJsPaths(jsPaths);
 		emailPageData.setCssPaths(cssPaths);
-		return emailTemplateFacade.getPageTemplate(emailPageData);
+		String htmlContent = emailTemplateFacade.getPageTemplate(emailPageData);
+		response.setContentType(MediaType.TEXT_HTML_VALUE);
+		response.getWriter().write(htmlContent);
 	}
 
 }

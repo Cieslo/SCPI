@@ -1,10 +1,10 @@
 <%@ tag body-content="empty" trimDirectiveWhitespaces="true"%>
 <%@ attribute name="comments" required="true" type="java.util.List"%>
 <%@ attribute name="disabled" required="false" type="java.lang.Boolean"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
+<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
 
 <spring:htmlEscape defaultHtmlEscape="true" />
 <spring:url value="/quote/" var="quoteBaseLink" htmlEscape="false"/>

@@ -3,7 +3,7 @@
  */
 package de.hybris.platform.yb2bacceleratorstorefront.security;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 
 /**

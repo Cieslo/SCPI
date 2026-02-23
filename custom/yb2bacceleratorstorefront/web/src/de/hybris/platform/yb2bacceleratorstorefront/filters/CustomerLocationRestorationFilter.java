@@ -10,14 +10,13 @@ import de.hybris.platform.yb2bacceleratorstorefront.security.cookie.CustomerLoca
 
 import java.io.IOException;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Required;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 
@@ -85,7 +84,6 @@ public class CustomerLocationRestorationFilter extends OncePerRequestFilter
 		return customerLocationFacade;
 	}
 
-	@Required
 	public void setCustomerLocationFacade(final CustomerLocationFacade customerLocationFacade)
 	{
 		this.customerLocationFacade = customerLocationFacade;
@@ -96,7 +94,6 @@ public class CustomerLocationRestorationFilter extends OncePerRequestFilter
 		return customerLocationCookieGenerator;
 	}
 
-	@Required
 	public void setCustomerLocationCookieGenerator(final CustomerLocationCookieGenerator customerLocationCookieGenerator)
 	{
 		this.customerLocationCookieGenerator = customerLocationCookieGenerator;

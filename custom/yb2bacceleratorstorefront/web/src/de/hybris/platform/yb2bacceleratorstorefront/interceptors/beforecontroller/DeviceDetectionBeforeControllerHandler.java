@@ -6,9 +6,9 @@ package de.hybris.platform.yb2bacceleratorstorefront.interceptors.beforecontroll
 import de.hybris.platform.acceleratorfacades.device.DeviceDetectionFacade;
 import de.hybris.platform.acceleratorstorefrontcommons.interceptors.BeforeControllerHandler;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.springframework.web.method.HandlerMethod;
 

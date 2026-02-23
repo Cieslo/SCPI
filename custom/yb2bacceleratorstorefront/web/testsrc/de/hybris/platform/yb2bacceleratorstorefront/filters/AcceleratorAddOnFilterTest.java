@@ -10,10 +10,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -51,7 +51,7 @@ public class AcceleratorAddOnFilterTest
 	@Before
 	public void prepare() throws FileNotFoundException
 	{
-		Mockito.doReturn("/addons/").when(request).getAttribute("javax.servlet.include.servlet_path");
+		Mockito.doReturn("/addons/").when(request).getAttribute("jakarta.servlet.include.servlet_path");
 	}
 
 	private void setAddOnFilterActive(final boolean active)

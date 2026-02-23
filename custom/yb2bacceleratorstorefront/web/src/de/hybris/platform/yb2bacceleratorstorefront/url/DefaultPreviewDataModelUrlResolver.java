@@ -16,8 +16,6 @@ import de.hybris.platform.core.model.product.ProductModel;
 
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Required;
-
 
 /**
  * Responsible for generating correct URL for given page.
@@ -33,7 +31,6 @@ public class DefaultPreviewDataModelUrlResolver implements UrlResolver<PreviewDa
 		return productModelUrlResolver;
 	}
 
-	@Required
 	public void setProductModelUrlResolver(final UrlResolver<ProductModel> productModelUrlResolver)
 	{
 		this.productModelUrlResolver = productModelUrlResolver;
@@ -44,7 +41,6 @@ public class DefaultPreviewDataModelUrlResolver implements UrlResolver<PreviewDa
 		return categoryModelUrlResolver;
 	}
 
-	@Required
 	public void setCategoryModelUrlResolver(final UrlResolver<CategoryModel> categoryModelUrlResolver)
 	{
 		this.categoryModelUrlResolver = categoryModelUrlResolver;
@@ -55,7 +51,6 @@ public class DefaultPreviewDataModelUrlResolver implements UrlResolver<PreviewDa
 		return pageMapping;
 	}
 
-	@Required
 	public void setPageMapping(final Map<String, String> pageMapping)
 	{
 		this.pageMapping = pageMapping;

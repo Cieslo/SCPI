@@ -9,11 +9,11 @@ import de.hybris.platform.commercefacades.consent.AnonymousConsentFacade;
 import de.hybris.platform.commercefacades.consent.data.AnonymousConsentData;
 import de.hybris.platform.commercefacades.user.UserFacade;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletContext;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.net.URLDecoder;
@@ -23,11 +23,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Spy;
+import org.mockito.*;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletResponse;
 
@@ -43,6 +39,7 @@ import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.mockStatic;
 
 
 @UnitTest
@@ -90,21 +87,25 @@ public class ConsentFilterTest
 				.when(anonymousConsentFacade).synchronizeAnonymousConsents(any(), any());
 
 		// other methods
-		when(Boolean.valueOf(userFacade.isAnonymousUser())).thenReturn(Boolean.TRUE);
+		try (MockedStatic<Boolean> mockBoolean = mockStatic(Boolean.class)) {
+			mockBoolean.when(()-> Boolean.valueOf(userFacade.isAnonymousUser())).thenReturn(Boolean.TRUE);
+		}
 	}
 
 	@Test
 	public void shouldWorkOnlyForAnonymousUser() throws Exception
 	{
 		// given
-		when(Boolean.valueOf(userFacade.isAnonymousUser())).thenReturn(Boolean.FALSE);
+		try (MockedStatic<Boolean> mockBoolean = mockStatic(Boolean.class)) {
+			mockBoolean.when(()-> Boolean.valueOf(userFacade.isAnonymousUser())).thenReturn(Boolean.FALSE);
 
-		// when
-		consentFilter.doFilterInternal(request, response, filterChain);
+			// when
+			consentFilter.doFilterInternal(request, response, filterChain);
 
-		// then
-		verify(response, times(0)).addCookie(any());
-		verify(anonymousConsentFacade, times(0)).synchronizeAnonymousConsents(any(), any());
+			// then
+			verify(response, times(0)).addCookie(any());
+			verify(anonymousConsentFacade, times(0)).synchronizeAnonymousConsents(any(), any());
+		}
 	}
 
 	@Test

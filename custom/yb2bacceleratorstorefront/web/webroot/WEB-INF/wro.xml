@@ -1,6 +1,6 @@
 <!--
- Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved.
--->
+  ~ Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved.
+  -->
 <groups xmlns="http://www.isdc.ro/wro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
 
@@ -30,7 +30,7 @@
 		<js>/_ui/responsive/common/js/jquery.pstrength.custom-1.2.0.js</js>
 		<js>/_ui/responsive/common/js/jquery.syncheight.custom.js</js>
 		<js>/_ui/responsive/common/js/jquery.tabs.custom.js</js>
-		<js minimize="false">/_ui/responsive/common/js/jquery-ui-1.13.3.min.js</js>
+		<js minimize="false">/_ui/responsive/common/js/jquery-ui-1.14.1.min.js</js>
 		<js>/_ui/responsive/common/js/jquery.zoom.custom.js</js>
 		<js>/_ui/responsive/common/js/owl.carousel.custom.js</js>
 		<js minimize="false">/_ui/responsive/common/js/jquery.tmpl-1.0.0pre.min.js</js>

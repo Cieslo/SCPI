@@ -7,10 +7,9 @@ import de.hybris.platform.acceleratorstorefrontcommons.interceptors.BeforeViewHa
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -26,7 +25,6 @@ public class BeforeViewHandlerInterceptor implements HandlerInterceptor
 		return beforeViewHandlers;
 	}
 
-	@Required
 	public void setBeforeViewHandlers(final List<BeforeViewHandler> beforeViewHandlers)
 	{
 		this.beforeViewHandlers = beforeViewHandlers;
@@ -46,7 +44,7 @@ public class BeforeViewHandlerInterceptor implements HandlerInterceptor
 
 	protected boolean isIncludeRequest(final HttpServletRequest request)
 	{
-		return request.getAttribute("javax.servlet.include.request_uri") != null;
+		return request.getAttribute("jakarta.servlet.include.request_uri") != null;
 	}
 
 	protected boolean isSupportedView(final ModelAndView modelAndView)

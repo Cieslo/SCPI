@@ -1,6 +1,6 @@
 <%@ tag body-content="empty" trimDirectiveWhitespaces="true" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions"%>
 
 <%@ taglib prefix="cms" tagdir="/WEB-INF/tags/responsive/template/cms" %>
 <%@ taglib prefix="template" tagdir="/WEB-INF/tags/responsive/template" %>
@@ -28,7 +28,7 @@
 		<script src="${commonResourcePathHtml}/js/jquery.pstrength.custom-1.2.0.js"></script>
 		<script src="${commonResourcePathHtml}/js/jquery.syncheight.custom.js"></script>
 		<script src="${commonResourcePathHtml}/js/jquery.tabs.custom.js"></script>
-		<script src="${commonResourcePathHtml}/js/jquery-ui-1.13.3.min.js"></script>
+		<script src="${commonResourcePathHtml}/js/jquery-ui-1.14.1.min.js"></script>
 		<script src="${commonResourcePathHtml}/js/jquery.zoom.custom.js"></script>
 		<script src="${commonResourcePathHtml}/js/owl.carousel.custom.js"></script>
 		<script src="${commonResourcePathHtml}/js/jquery.tmpl-1.0.0pre.min.js"></script>

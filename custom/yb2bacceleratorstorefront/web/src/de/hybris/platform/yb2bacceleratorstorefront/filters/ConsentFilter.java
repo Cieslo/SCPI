@@ -8,11 +8,11 @@ import de.hybris.platform.commercefacades.consent.AnonymousConsentFacade;
 import de.hybris.platform.commercefacades.consent.data.AnonymousConsentData;
 import de.hybris.platform.commercefacades.user.UserFacade;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.net.URLDecoder;
@@ -26,7 +26,6 @@ import java.util.function.Supplier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.util.WebUtils;
 
@@ -117,7 +116,6 @@ public class ConsentFilter extends OncePerRequestFilter
 		return userFacade;
 	}
 
-	@Required
 	public void setUserFacade(final UserFacade userFacade)
 	{
 		this.userFacade = userFacade;
@@ -128,7 +126,6 @@ public class ConsentFilter extends OncePerRequestFilter
 		return anonymousConsentFacade;
 	}
 
-	@Required
 	public void setAnonymousConsentFacade(final AnonymousConsentFacade anonymousConsentFacade)
 	{
 		this.anonymousConsentFacade = anonymousConsentFacade;

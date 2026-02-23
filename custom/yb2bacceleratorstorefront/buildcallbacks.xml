@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
- Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
---><!--
+  ~ Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved.
+  --><!--
  All hybris buildcallbacks.xml macrodefinitions:
 
  Build/Documentation
@@ -64,7 +64,7 @@
     	
     <property location="${ext.yb2bacceleratorstorefront.path}/web/webroot/WEB-INF/lib/lessc-rhino-1.7.3.js" name="tool.lessc"/>
     	
-    <property location="${ext.yb2bacceleratorstorefront.path}/web/webroot/WEB-INF/lib/rhino-1.7.15.jar" name="tool.rhino"/>
+    <property location="${ext.yb2bacceleratorstorefront.path}/web/webroot/WEB-INF/lib/rhino-all-1.8.0.jar" name="tool.rhino"/>
     	
     <property location="${ext.yb2bacceleratorstorefront.path}" name="ext.yb2bacceleratorstorefront.mapperToPath"/>
     	

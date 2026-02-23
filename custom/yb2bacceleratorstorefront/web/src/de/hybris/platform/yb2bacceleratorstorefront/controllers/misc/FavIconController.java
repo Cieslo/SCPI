@@ -6,9 +6,10 @@ package de.hybris.platform.yb2bacceleratorstorefront.controllers.misc;
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
 import de.hybris.platform.cms2.misc.UrlUtils;
 import de.hybris.platform.servicelayer.i18n.I18NService;
+import de.hybris.platform.util.Sanitizer;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,7 +48,7 @@ public class FavIconController extends AbstractController
 		final Theme theme = themeSource.getTheme(themeName);
 		String iconPath = "";
 		if(theme == null) {
-			LOGGER.error("Could not find theme for themeName: {} in request, favicon might not behave correctly", themeName);
+			LOGGER.error("Could not find theme for themeName: {} in request, favicon might not behave correctly", Sanitizer.sanitize(themeName));
 		} else {
 			iconPath = theme.getMessageSource().getMessage(FAVICON_THEME_CODE, new Object[] {}, i18nService.getCurrentLocale());
 		}

@@ -5,13 +5,12 @@ package de.hybris.platform.yb2bacceleratorstorefront.renderer;
 
 import de.hybris.platform.acceleratorcms.component.renderer.CMSComponentRenderer;
 import de.hybris.platform.acceleratorcms.model.components.ImageMapComponentModel;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.owasp.html.HtmlPolicyBuilder;
 import org.owasp.html.PolicyFactory;
 
-import javax.servlet.ServletException;
-import javax.servlet.jsp.JspWriter;
-import javax.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.JspWriter;
+import jakarta.servlet.jsp.PageContext;
 import java.io.IOException;
 
 

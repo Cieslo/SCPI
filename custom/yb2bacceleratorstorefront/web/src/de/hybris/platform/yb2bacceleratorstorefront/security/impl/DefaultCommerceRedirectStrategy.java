@@ -7,11 +7,10 @@ import de.hybris.platform.acceleratorfacades.flow.CheckoutFlowFacade;
 
 import java.io.IOException;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Required;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.web.DefaultRedirectStrategy;
 
 
@@ -46,7 +45,6 @@ public class DefaultCommerceRedirectStrategy extends DefaultRedirectStrategy
 		return expressTargetUrl;
 	}
 
-	@Required
 	public void setExpressTargetUrl(final String expressTargetUrl)
 	{
 		this.expressTargetUrl = expressTargetUrl;
@@ -57,7 +55,6 @@ public class DefaultCommerceRedirectStrategy extends DefaultRedirectStrategy
 		return checkoutFlowFacade;
 	}
 
-	@Required
 	public void setCheckoutFlowFacade(final CheckoutFlowFacade checkoutFlowFacade)
 	{
 		this.checkoutFlowFacade = checkoutFlowFacade;

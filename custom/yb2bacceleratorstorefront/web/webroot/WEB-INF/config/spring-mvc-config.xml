@@ -26,22 +26,41 @@
 	<alias name="jaxb2RootElementHttpMessageConverter" alias="jaxbMessageConverter" />
 	<bean id="jaxb2RootElementHttpMessageConverter" class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter" />
 
-	<!-- activates annotation driven binding -->
-	<mvc:annotation-driven ignore-default-model-on-redirect="true" validator="validator">
-		<mvc:message-converters>
-			<bean class="org.springframework.http.converter.ResourceHttpMessageConverter"/>
-			<ref bean="jaxbMessageConverter"/>
-			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
-		</mvc:message-converters>
-	</mvc:annotation-driven>
-
 	<!-- Scan for annotation configured controller -->
 	<context:component-scan base-package="de.hybris.platform.yb2bacceleratorstorefront" scope-resolver="de.hybris.platform.spring.IgnoreTenantScopeMetadataResolver"  />
 
-    
+	<bean id="mvcHandlerMappingIntrospector" class="org.springframework.web.servlet.handler.HandlerMappingIntrospector"/>
 
 	<!-- Data Value Processor -->
 	<bean name="defaultRequestDataValueProcessor" class="de.hybris.platform.yb2bacceleratorstorefront.util.DefaultRequestDataProcessor" />
+
+    <!-- RequestMappingHandlerMapping still uses antPathMatcher, patternParser needs to be set to nul -->
+    <bean id="requestMappingHandlerMapping"
+          class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
+        <property name="pathMatcher" ref="defaultPathMatcher"/>
+        <property name="patternParser">
+            <null/>
+        </property>
+    </bean>
+
+    <!-- IntegrationRequestMappingHandlerMapping still uses antPathMatcher, patternParser needs to be set to nul -->
+    <bean id="integrationRequestMappingHandlerMapping"
+          class="org.springframework.integration.http.inbound.IntegrationRequestMappingHandlerMapping">
+        <property name="pathMatcher" ref="defaultPathMatcher"/>
+        <property name="patternParser">
+            <null/>
+        </property>
+    </bean>
+
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.ResourceHttpMessageConverter"/>
+				<ref bean="jaxbMessageConverter"/>
+				<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+			</list>
+		</property>
+	</bean>
 
 	<!--This is a bean post-processor for RequestMappingHandlerAdapter-->
 	<bean class="de.hybris.platform.yb2bacceleratorstorefront.web.mvc.RequestMappingHandlerAdapterConfigurer" init-method="init" lazy-init="false">

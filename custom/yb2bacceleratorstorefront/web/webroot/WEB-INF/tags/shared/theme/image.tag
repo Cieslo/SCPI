@@ -4,8 +4,8 @@
 <%@ attribute name="title" required="false" type="java.lang.String" %>
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 
 <spring:htmlEscape defaultHtmlEscape="true" />
 <spring:theme code="${code}" text="/" var="imagePath" htmlEscape="false"/>

@@ -1,8 +1,8 @@
 <%@ page trimDirectiveWhitespaces="true"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <spring:htmlEscape defaultHtmlEscape="true" />
@@ -24,11 +24,10 @@
                         <div class="col-xs-12 col-sm-6 col-md-4 card">
                             <ul class="pull-left">
                                 <li>
-                                    <c:if test="${paymentInfo.defaultPaymentInfo}">
-                                    	<strong>
-                                    </c:if>
-                                    	${fn:escapeXml(paymentInfo.accountHolderName)}<c:if test="${paymentInfo.defaultPaymentInfo}" >&nbsp;(<spring:theme code="text.default" />)</c:if>
-                                    <c:if test="${paymentInfo.defaultPaymentInfo}" ></strong></c:if>
+                                   <c:if test="${paymentInfo.defaultPaymentInfo}"></c:if>
+                                   <strong>${fn:escapeXml(paymentInfo.accountHolderName)}</strong>
+                                   <c:if test="${paymentInfo.defaultPaymentInfo}" >&nbsp;(<spring:theme code="text.default" />)</c:if>
+                                   <c:if test="${paymentInfo.defaultPaymentInfo}" ></c:if>
                                 </li>
                                 <li>${fn:escapeXml(paymentInfo.cardTypeData.name)}</li>
                                 <li>

@@ -24,12 +24,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import junit.framework.Assert;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -107,7 +107,7 @@ public class CartSuggestionComponentControllerTest
 		given(cartSuggestionComponentModel.getMaximumNumberProducts()).willReturn(Integer.valueOf(10));
 
 		given(
-				simpleSuggestionFacade.getSuggestionsForProductsInCart(Mockito.anyListOf(ProductReferenceTypeEnum.class),
+				simpleSuggestionFacade.getSuggestionsForProductsInCart(Mockito.anyList(),
 						Mockito.eq(true), Mockito.eq(10))).willReturn(productDataList);
 		given(request.getAttribute(COMPONENT)).willReturn(cartSuggestionComponentModel);
 
@@ -130,7 +130,7 @@ public class CartSuggestionComponentControllerTest
 		given(Boolean.valueOf(cartSuggestionComponentModel.isFilterPurchased())).willReturn(Boolean.TRUE);
 
 		given(
-				simpleSuggestionFacade.getSuggestionsForProductsInCart(Mockito.anyListOf(ProductReferenceTypeEnum.class),
+				simpleSuggestionFacade.getSuggestionsForProductsInCart(Mockito.anyList(),
 						Mockito.eq(true), Mockito.eq(1))).willReturn(productDataList);
 
 		final String viewName = cartSuggestionComponentController.handleGet(request, response, model);

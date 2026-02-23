@@ -11,15 +11,16 @@ import de.hybris.platform.site.BaseSiteService;
 import de.hybris.platform.util.Sanitizer;
 
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
 
@@ -47,7 +48,7 @@ public class BaseIntegrationController extends AbstractController
 		try
 		{
 
-			final URL currentURL = new URL(absoluteURL);
+			final URL currentURL = URI.create(absoluteURL).toURL();
 			final CMSSiteModel cmsSiteModel = cmsSiteService.getSiteForURL(currentURL);
 			if (cmsSiteModel != null)
 			{

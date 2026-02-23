@@ -16,18 +16,17 @@ import de.hybris.platform.servicelayer.dto.converter.Converter;
 
 import java.io.IOException;
 
-import javax.servlet.ServletException;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.JspWriter;
-import javax.servlet.jsp.PageContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspWriter;
+import jakarta.servlet.jsp.PageContext;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.taglibs.standard.tag.common.core.UrlSupport;
 import org.owasp.html.HtmlPolicyBuilder;
 import org.owasp.html.PolicyFactory;
 import org.owasp.html.Sanitizers;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.util.HtmlUtils;
 
 import static de.hybris.platform.acceleratorstorefrontcommons.tags.HTMLSanitizer.sanitizeHTML;
@@ -58,7 +57,6 @@ public class CMSLinkComponentRenderer implements CMSComponentRenderer<CMSLinkCom
 		return productUrlConverter;
 	}
 
-	@Required
 	public void setProductUrlConverter(final Converter<ProductModel, ProductData> productUrlConverter)
 	{
 		this.productUrlConverter = productUrlConverter;
@@ -69,7 +67,6 @@ public class CMSLinkComponentRenderer implements CMSComponentRenderer<CMSLinkCom
 		return categoryUrlConverter;
 	}
 
-	@Required
 	public void setCategoryUrlConverter(final Converter<CategoryModel, CategoryData> categoryUrlConverter)
 	{
 		this.categoryUrlConverter = categoryUrlConverter;

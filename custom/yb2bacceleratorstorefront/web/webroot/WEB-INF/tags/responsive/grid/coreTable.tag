@@ -9,11 +9,11 @@
 <%@ attribute name="showName" required="false" type="java.lang.Boolean"%>
 <%@ attribute name="showLastDimensionTitle" required="false" type="java.lang.Boolean"%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="grid" tagdir="/WEB-INF/tags/responsive/grid" %>
 <%@ taglib prefix="format" tagdir="/WEB-INF/tags/shared/format" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 <%@ taglib prefix="product" tagdir="/WEB-INF/tags/responsive/product" %>
 
 <spring:htmlEscape defaultHtmlEscape="true" />

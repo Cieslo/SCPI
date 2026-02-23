@@ -5,9 +5,9 @@ package de.hybris.platform.yb2bacceleratorstorefront.web.wrappers;
 
 import de.hybris.bootstrap.annotations.UnitTest;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

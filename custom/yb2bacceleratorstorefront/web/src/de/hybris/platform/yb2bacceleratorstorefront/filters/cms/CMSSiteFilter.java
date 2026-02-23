@@ -29,14 +29,13 @@ import de.hybris.platform.site.BaseSiteService;
 import java.io.IOException;
 import java.util.Collection;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 
@@ -338,7 +337,6 @@ public class CMSSiteFilter extends OncePerRequestFilter implements CMSFilter
 		return previewDataModelUrlResolver;
 	}
 
-	@Required
 	public void setPreviewDataModelUrlResolver(final UrlResolver<PreviewDataModel> previewDataModelUrlResolver)
 	{
 		this.previewDataModelUrlResolver = previewDataModelUrlResolver;
@@ -349,7 +347,6 @@ public class CMSSiteFilter extends OncePerRequestFilter implements CMSFilter
 		return cmsSiteService;
 	}
 
-	@Required
 	public void setCmsSiteService(final CMSSiteService cmsSiteService)
 	{
 		this.cmsSiteService = cmsSiteService;
@@ -360,7 +357,6 @@ public class CMSSiteFilter extends OncePerRequestFilter implements CMSFilter
 		return sessionService;
 	}
 
-	@Required
 	public void setSessionService(final SessionService sessionService)
 	{
 		this.sessionService = sessionService;
@@ -371,7 +367,6 @@ public class CMSSiteFilter extends OncePerRequestFilter implements CMSFilter
 		return cmsPreviewService;
 	}
 
-	@Required
 	public void setCmsPreviewService(final CMSPreviewService cmsPreviewService)
 	{
 		this.cmsPreviewService = cmsPreviewService;
@@ -382,7 +377,6 @@ public class CMSSiteFilter extends OncePerRequestFilter implements CMSFilter
 		return commerceCommonI18NService;
 	}
 
-	@Required
 	public void setCommerceCommonI18NService(final CommerceCommonI18NService commerceCommonI18NService)
 	{
 		this.commerceCommonI18NService = commerceCommonI18NService;
@@ -393,7 +387,6 @@ public class CMSSiteFilter extends OncePerRequestFilter implements CMSFilter
 		return baseSiteService;
 	}
 
-	@Required
 	public void setBaseSiteService(final BaseSiteService baseSiteService)
 	{
 		this.baseSiteService = baseSiteService;
@@ -404,7 +397,6 @@ public class CMSSiteFilter extends OncePerRequestFilter implements CMSFilter
 		return contextInformationLoader;
 	}
 
-	@Required
 	public void setContextInformationLoader(final ContextInformationLoader contextInformationLoader)
 	{
 		this.contextInformationLoader = contextInformationLoader;
@@ -415,7 +407,6 @@ public class CMSSiteFilter extends OncePerRequestFilter implements CMSFilter
 		return cmsPageContextService;
 	}
 
-	@Required
 	public void setCmsPageContextService(final CMSPageContextService cmsPageContextService)
 	{
 		this.cmsPageContextService = cmsPageContextService;
@@ -426,7 +417,6 @@ public class CMSSiteFilter extends OncePerRequestFilter implements CMSFilter
 		return siteChannelValidationStrategy;
 	}
 
-	@Required
 	public void setSiteChannelValidationStrategy(final SiteChannelValidationStrategy siteChannelValidationStrategy)
 	{
 		this.siteChannelValidationStrategy = siteChannelValidationStrategy;

@@ -11,8 +11,8 @@ import de.hybris.platform.commercefacades.consent.data.ConsentTemplateData;
 import de.hybris.platform.commercefacades.user.UserFacade;
 import de.hybris.platform.servicelayer.session.SessionService;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -25,10 +25,7 @@ import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Spy;
+import org.mockito.*;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.web.servlet.ModelAndView;
@@ -44,6 +41,7 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.mockStatic;
 
 
 @UnitTest
@@ -116,7 +114,9 @@ public class ConsentManagementBeforeViewHandlerTest
 		consentTemplateDataNoState = Arrays.asList(emptyTemplate);
 
 		// other methods
-		when(Boolean.valueOf(userFacade.isAnonymousUser())).thenReturn(Boolean.TRUE);
+		try (MockedStatic<Boolean> mockBoolean = mockStatic(Boolean.class)) {
+			mockBoolean.when(()-> Boolean.valueOf(userFacade.isAnonymousUser())).thenReturn(Boolean.TRUE);
+		}
 	}
 
 
@@ -124,13 +124,15 @@ public class ConsentManagementBeforeViewHandlerTest
 	public void shouldWorkOnlyForAnonymousUser() throws Exception
 	{
 		//given
-		when(Boolean.valueOf(userFacade.isAnonymousUser())).thenReturn(Boolean.FALSE);
+		try (MockedStatic<Boolean> mockBoolean = mockStatic(Boolean.class)) {
+			mockBoolean.when(()-> Boolean.valueOf(userFacade.isAnonymousUser())).thenReturn(Boolean.FALSE);
 
-		//when
-		consentManagementBeforeViewHandler.beforeView(request, response, modelAndView);
+			//when
+			consentManagementBeforeViewHandler.beforeView(request, response, modelAndView);
 
-		//then
-		verify(modelAndView, times(0)).addObject(eq(CONSENT_TEMPLATES), any());
+			//then
+			verify(modelAndView, times(0)).addObject(eq(CONSENT_TEMPLATES), any());
+		}
 	}
 
 	@Test

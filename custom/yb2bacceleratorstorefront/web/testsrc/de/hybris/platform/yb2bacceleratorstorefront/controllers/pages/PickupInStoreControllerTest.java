@@ -137,7 +137,7 @@ public class PickupInStoreControllerTest
 			.hasFieldOrProperty("product")
 			.extracting("product")
 			.extracting("code")
-			.containsExactly(PRODUCT_CODE);
+			.isEqualTo(PRODUCT_CODE);
 	}
 
 	@Test
@@ -173,6 +173,6 @@ public class PickupInStoreControllerTest
 			.hasFieldOrProperty("product")
 			.extracting("product")
 			.extracting("code")
-			.containsExactly(PRODUCT_CODE);
+			.isEqualTo(PRODUCT_CODE);
 	}
 }

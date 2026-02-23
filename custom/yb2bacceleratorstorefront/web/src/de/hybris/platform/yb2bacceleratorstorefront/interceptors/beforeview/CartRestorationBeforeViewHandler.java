@@ -9,11 +9,10 @@ import de.hybris.platform.servicelayer.session.SessionService;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Required;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -76,7 +75,6 @@ public class CartRestorationBeforeViewHandler implements BeforeViewHandler
 		return sessionService;
 	}
 
-	@Required
 	public void setSessionService(final SessionService sessionService)
 	{
 		this.sessionService = sessionService;
@@ -87,7 +85,6 @@ public class CartRestorationBeforeViewHandler implements BeforeViewHandler
 		return pagesToShowModifications;
 	}
 
-	@Required
 	public void setPagesToShowModifications(final List<String> pagesToShowModifications)
 	{
 		this.pagesToShowModifications = pagesToShowModifications;

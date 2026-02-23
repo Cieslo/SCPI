@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved.
+ * Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved.
  */
 package de.hybris.platform.yb2bacceleratorstorefront.controllers.pages;
 
@@ -44,12 +44,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -58,9 +58,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.google.common.collect.Maps;
@@ -194,7 +194,7 @@ public class ProductPageController extends AbstractPageController
 	}
 
 	@RequestMapping(value = PRODUCT_CODE_PATH_VARIABLE_PATTERN + "/quickView", method = RequestMethod.GET)
-	public String showQuickView(@PathVariable("productCode") final String productCode, final Model model,
+	public String showQuickView(@PathVariable("productCode")  final String productCode, final Model model,
 			final HttpServletRequest request)
 	{
 		final ProductModel productModel = productService.getProductForCode(productCode);
@@ -241,7 +241,7 @@ public class ProductPageController extends AbstractPageController
 	@RequestMapping(value = PRODUCT_CODE_PATH_VARIABLE_PATTERN + "/reviewhtml/"
 			+ REVIEWS_PATH_VARIABLE_PATTERN, method = RequestMethod.GET)
 	public String reviewHtml(@PathVariable("productCode") final String productCode,
-			@PathVariable("numberOfReviews") final String numberOfReviews, final Model model, final HttpServletRequest request)
+			@PathVariable("numberOfReviews")  final String numberOfReviews, final Model model, final HttpServletRequest request)
 	{
 		final ProductModel productModel = productService.getProductForCode(productCode);
 		final List<ReviewData> reviews;
@@ -344,7 +344,7 @@ public class ProductPageController extends AbstractPageController
 
 	@ResponseBody
 	@RequestMapping(value = PRODUCT_CODE_PATH_VARIABLE_PATTERN + "/grid/skusFutureStock", method =
-	{ RequestMethod.POST }, produces = MediaType.APPLICATION_JSON_VALUE)
+			{ RequestMethod.POST }, produces = MediaType.APPLICATION_JSON_VALUE)
 	public final Map<String, Object> productSkusFutureStock(final FutureStockForm form, final Model model)
 	{
 		final String productCode = form.getProductCode();

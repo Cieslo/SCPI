@@ -1,9 +1,9 @@
 <%@ page trimDirectiveWhitespaces="true" contentType="application/json" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="jakarta.tags.fmt" prefix="fmt"%>
 <%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags" %>
 <%@ taglib prefix="format" tagdir="/WEB-INF/tags/shared/format" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
 <c:if test="${totalDisplay == 'TOTAL'}">
 	<c:set var="totalToDisplayHtml" ><format:price priceData="${totalPrice}"/></c:set>

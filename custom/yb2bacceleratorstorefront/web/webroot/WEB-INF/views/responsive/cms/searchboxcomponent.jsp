@@ -1,13 +1,13 @@
 <%@ page trimDirectiveWhitespaces="true"%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 
 <spring:htmlEscape defaultHtmlEscape="true" />
 
-<c:url value="/search/" var="searchUrl" />
+<c:url value="/search" var="searchUrl" />
 <spring:url value="/search/autocomplete/{/componentuid}" var="autocompleteUrl" htmlEscape="false">
      <spring:param name="componentuid"  value="${component.uid}"/>
 </spring:url>

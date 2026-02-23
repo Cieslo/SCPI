@@ -15,7 +15,7 @@ import de.hybris.platform.commercefacades.product.data.ProductData;
 
 import java.util.Collections;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

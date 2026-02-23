@@ -10,9 +10,8 @@ import de.hybris.platform.commerceservices.enums.UiExperienceLevel;
 import java.util.Locale;
 import java.util.Map;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.servlet.view.AbstractUrlBasedView;
 import org.springframework.web.servlet.view.InternalResourceView;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -37,7 +36,6 @@ public class UiExperienceViewResolver extends InternalResourceViewResolver
 		return uiExperienceService;
 	}
 
-	@Required
 	public void setUiExperienceService(final UiExperienceService uiExperienceService)
 	{
 		this.uiExperienceService = uiExperienceService;
@@ -48,7 +46,6 @@ public class UiExperienceViewResolver extends InternalResourceViewResolver
 		return uiExperienceViewPrefix;
 	}
 
-	@Required
 	public void setUiExperienceViewPrefix(final Map<UiExperienceLevel, String> uiExperienceViewPrefix)
 	{
 		this.uiExperienceViewPrefix = uiExperienceViewPrefix;
@@ -59,7 +56,6 @@ public class UiExperienceViewResolver extends InternalResourceViewResolver
 		return unknownUiExperiencePrefix;
 	}
 
-	@Required
 	public void setUnknownUiExperiencePrefix(final String unknownUiExperiencePrefix)
 	{
 		this.unknownUiExperiencePrefix = unknownUiExperiencePrefix;
@@ -70,7 +66,6 @@ public class UiExperienceViewResolver extends InternalResourceViewResolver
 		return addOnPrefix;
 	}
 
-	@Required
 	public void setAddOnPrefix(final String addOnPrefix)
 	{
 		this.addOnPrefix = addOnPrefix;

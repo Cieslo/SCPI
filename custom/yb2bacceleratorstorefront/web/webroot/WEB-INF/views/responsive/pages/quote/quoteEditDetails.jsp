@@ -1,6 +1,6 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="formElement" tagdir="/WEB-INF/tags/responsive/formElement" %>
 <%@ taglib prefix="quote" tagdir="/WEB-INF/tags/responsive/quote" %>
@@ -9,10 +9,10 @@
 
 <spring:htmlEscape defaultHtmlEscape="true" />
 <c:url value="${continueUrl}" var="continueShoppingUrl" scope="session"/>
-<spring:url value="/quote/{/quoteCode}/expiration/" var="expirationTimeUrl" htmlEscape="false">
+<spring:url value="/quote/{/quoteCode}/expiration" var="expirationTimeUrl" htmlEscape="false">
     <spring:param name="quoteCode" value="${cartData.quoteData.code}"/>
 </spring:url>
-<spring:url value="/quote/{/quoteCode}/metadata/" var="metadataUrl" htmlEscape="false">
+<spring:url value="/quote/{/quoteCode}/metadata" var="metadataUrl" htmlEscape="false">
     <spring:param name="quoteCode" value="${cartData.quoteData.code}"/>
 </spring:url>
 

@@ -9,9 +9,9 @@ import de.hybris.platform.yb2bacceleratorstorefront.filters.AcceleratorAddOnFilt
 import java.io.File;
 import java.io.IOException;
 
-import javax.servlet.FilterChain;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
@@ -75,7 +75,7 @@ public abstract class AbstractAddOnFilterTest
 
 		Mockito.doReturn(webExtensionPhysicalPath).when(extensionAccessor).getExtensionDir(STOREFRONT_NAME);
 		Mockito.doReturn(addOnExtensionPhysicalPath).when(extensionAccessor).getExtensionDir(ADDONTWO_NAME);
-		Mockito.doReturn("/addons/").when(request).getAttribute("javax.servlet.include.servlet_path");
+		Mockito.doReturn("/addons/").when(request).getAttribute("jakarta.servlet.include.servlet_path");
 	}
 
 	protected File createWebCtxPhysicalPath()

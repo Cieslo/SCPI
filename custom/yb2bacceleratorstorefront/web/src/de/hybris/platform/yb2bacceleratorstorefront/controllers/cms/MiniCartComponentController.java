@@ -11,8 +11,8 @@ import de.hybris.platform.yb2bacceleratorstorefront.controllers.ControllerConsta
 
 import java.util.Optional;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

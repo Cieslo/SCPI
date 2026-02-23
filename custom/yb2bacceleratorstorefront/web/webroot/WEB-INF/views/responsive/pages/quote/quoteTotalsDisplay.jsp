@@ -1,6 +1,6 @@
 <%@ taglib prefix="order" tagdir="/WEB-INF/tags/responsive/order" %>
 <%@ taglib prefix="quote" tagdir="/WEB-INF/tags/responsive/quote" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
 <c:if test="${not empty quoteData}">
     <div class="account-orderdetail">

@@ -10,13 +10,12 @@ import de.hybris.platform.servicelayer.user.UserService;
 import de.hybris.platform.yb2bacceleratorstorefront.security.evaluator.SecurityTraitEvaluator;
 import de.hybris.platform.util.Sanitizer;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.util.CookieGenerator;
 
 
@@ -36,7 +35,6 @@ public class RequireHardLoginEvaluator implements SecurityTraitEvaluator
 		return cookieGenerator;
 	}
 
-	@Required
 	public void setCookieGenerator(final CookieGenerator cookieGenerator)
 	{
 		this.cookieGenerator = cookieGenerator;
@@ -47,7 +45,6 @@ public class RequireHardLoginEvaluator implements SecurityTraitEvaluator
 		return userService;
 	}
 
-	@Required
 	public void setUserService(final UserService userService)
 	{
 		this.userService = userService;
@@ -58,7 +55,6 @@ public class RequireHardLoginEvaluator implements SecurityTraitEvaluator
 		return sessionService;
 	}
 
-	@Required
 	public void setSessionService(final SessionService sessionService)
 	{
 		this.sessionService = sessionService;
@@ -69,7 +65,6 @@ public class RequireHardLoginEvaluator implements SecurityTraitEvaluator
 		return cartService;
 	}
 
-	@Required
 	public void setCartService(final CartService cartService)
 	{
 		this.cartService = cartService;

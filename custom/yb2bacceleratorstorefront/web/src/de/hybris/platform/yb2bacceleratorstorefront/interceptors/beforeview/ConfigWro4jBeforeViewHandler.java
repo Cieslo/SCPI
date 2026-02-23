@@ -6,10 +6,9 @@ package de.hybris.platform.yb2bacceleratorstorefront.interceptors.beforeview;
 import de.hybris.platform.acceleratorservices.config.SiteConfigService;
 import de.hybris.platform.acceleratorstorefrontcommons.interceptors.BeforeViewHandler;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -25,7 +24,6 @@ public class ConfigWro4jBeforeViewHandler implements BeforeViewHandler
 		return siteConfigService;
 	}
 
-	@Required
 	public void setSiteConfigService(final SiteConfigService siteConfigService)
 	{
 		this.siteConfigService = siteConfigService;

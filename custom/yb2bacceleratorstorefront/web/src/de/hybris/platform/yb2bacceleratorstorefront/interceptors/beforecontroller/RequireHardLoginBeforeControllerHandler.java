@@ -5,11 +5,10 @@ package de.hybris.platform.yb2bacceleratorstorefront.interceptors.beforecontroll
 
 import java.lang.annotation.Annotation;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.security.web.RedirectStrategy;
 import org.springframework.web.method.HandlerMethod;
@@ -37,7 +36,6 @@ public class RequireHardLoginBeforeControllerHandler implements BeforeController
 		return loginUrl;
 	}
 
-	@Required
 	public void setLoginUrl(final String loginUrl)
 	{
 		this.loginUrl = loginUrl;
@@ -48,7 +46,6 @@ public class RequireHardLoginBeforeControllerHandler implements BeforeController
 		return redirectStrategy;
 	}
 
-	@Required
 	public void setRedirectStrategy(final RedirectStrategy redirectStrategy)
 	{
 		this.redirectStrategy = redirectStrategy;
@@ -59,7 +56,6 @@ public class RequireHardLoginBeforeControllerHandler implements BeforeController
 		return loginAndCheckoutUrl;
 	}
 
-	@Required
 	public void setLoginAndCheckoutUrl(final String loginAndCheckoutUrl)
 	{
 		this.loginAndCheckoutUrl = loginAndCheckoutUrl;
@@ -70,7 +66,6 @@ public class RequireHardLoginBeforeControllerHandler implements BeforeController
 		return requireHardLoginEvaluator;
 	}
 
-	@Required
 	public void setRequireHardLoginEvaluator(RequireHardLoginEvaluator requireHardLoginEvaluator)
 	{
 		this.requireHardLoginEvaluator = requireHardLoginEvaluator;

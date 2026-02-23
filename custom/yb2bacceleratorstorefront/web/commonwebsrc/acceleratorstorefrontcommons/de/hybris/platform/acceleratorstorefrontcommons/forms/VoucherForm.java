@@ -5,14 +5,16 @@ package de.hybris.platform.acceleratorstorefrontcommons.forms;
 
 import de.hybris.platform.acceleratorstorefrontcommons.util.XSSFilterUtil;
 
+import java.io.Serial;
 import java.io.Serializable;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 
 public class VoucherForm implements Serializable
 {
+	@Serial
 	private static final long serialVersionUID = 3734178553292263688L;
 
 	@NotNull(message = "{text.voucher.apply.invalid.error}")

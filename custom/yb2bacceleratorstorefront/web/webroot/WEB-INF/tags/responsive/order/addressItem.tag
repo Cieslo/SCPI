@@ -2,8 +2,8 @@
 <%@ attribute name="address" required="true" type="de.hybris.platform.commercefacades.user.data.AddressData" %>
 <%@ attribute name="storeAddress" required="false" type="java.lang.Boolean" %>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 
 <c:if test="${not storeAddress }">
 	<c:if test="${not empty address.title}">

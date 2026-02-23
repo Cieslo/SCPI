@@ -5,9 +5,9 @@ package de.hybris.platform.yb2bacceleratorstorefront.web.mvc;
 
 import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.util.UrlPathHelper;
 
 /**

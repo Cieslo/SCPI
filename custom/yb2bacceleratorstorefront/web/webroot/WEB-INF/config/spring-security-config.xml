@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved.
+ Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved.
 -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:security="http://www.springframework.org/schema/security"
@@ -36,7 +36,7 @@
         <security:anonymous username="anonymous" granted-authority="ROLE_ANONYMOUS" />
 		<security:access-denied-handler error-page="/login"/>
 		<security:session-management session-authentication-strategy-ref="fixation" invalid-session-url="/login" />
-		<security:intercept-url pattern="/**" requires-channel="https" />
+		<security:intercept-url pattern="/**" access="permitAll()" requires-channel="https" />
 		<security:csrf  request-handler-ref="csrfTokenRequestAttributeHandler" token-repository-ref="csrfTokenRepository" request-matcher-ref="csrfProtectionMatcher"/>
 
 		<security:custom-filter before="CSRF_FILTER" ref="logoutFilter" />
@@ -76,12 +76,14 @@
 	<!-- The set of url(s) to exclude from the 'Default security config'-->
 	<bean id="excludeUrlSet" class="java.util.HashSet" />
 
+	<bean id="webexpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
+
 	<!-- Path matcher to use, AntPathMatcher is the default -->
 	<alias name="antPathMatcher" alias="defaultPathMatcher" />
 	<bean id="antPathMatcher" class="org.springframework.util.AntPathMatcher" />
 
 	<!-- Default security config -->
-	<security:http request-matcher-ref="excludeUrlRequestMatcher" request-matcher="mvc">
+	<security:http request-matcher-ref="excludeUrlRequestMatcher" request-matcher="mvc" security-context-explicit-save="false">
 		<security:anonymous username="anonymous" granted-authority="ROLE_ANONYMOUS" />
 		<security:access-denied-handler error-page="/login"/>
 		<security:session-management session-authentication-strategy-ref="fixation" session-authentication-error-url="/login" />
@@ -101,7 +103,7 @@
 		<security:intercept-url pattern="/my-account/**" access="hasRole('ROLE_CUSTOMERGROUP')" requires-channel="https" />
 		<security:intercept-url pattern="/quote/**" access="hasRole('ROLE_CUSTOMERGROUP')" requires-channel="https" />
 
-		<security:intercept-url pattern="/**" requires-channel="https" /> <!-- Everything should be secure -->
+		<security:intercept-url pattern="/**" access="permitAll()" requires-channel="https" /> <!-- Everything should be secure -->
 
 		<security:form-login
 				login-page="/login"

@@ -1,5 +1,5 @@
 <%@ tag body-content="scriptless" trimDirectiveWhitespaces="true" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 
 <%@ attribute name="CSSClass" required="false" type="java.lang.String" %>
 

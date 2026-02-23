@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved.
+ * Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved.
  */
 package de.hybris.platform.acceleratorstorefrontcommons.constants;
 
@@ -76,6 +76,8 @@ public final class WebConstants
 	public static final String CLOSE_ACCOUNT = "closeAcc";
 
 	public static final String EMAIL_REGEX = "email.regex";
+
+        public static final int ARRAY_LENGTH_TWO = 2;
 
 	private WebConstants()
 	{

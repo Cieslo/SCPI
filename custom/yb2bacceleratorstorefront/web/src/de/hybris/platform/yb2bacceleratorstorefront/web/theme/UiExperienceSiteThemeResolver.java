@@ -3,11 +3,10 @@
  */
 package de.hybris.platform.yb2bacceleratorstorefront.web.theme;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import de.hybris.platform.yb2bacceleratorstorefront.util.SiteThemeResolverUtils;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.servlet.theme.AbstractThemeResolver;
 
 
@@ -58,7 +57,6 @@ public class UiExperienceSiteThemeResolver extends AbstractThemeResolver
 		return siteThemeResolverUtils;
 	}
 
-	@Required
 	public void setSiteThemeResolverUtils(SiteThemeResolverUtils siteThemeResolverUtils)
 	{
 		this.siteThemeResolverUtils = siteThemeResolverUtils;

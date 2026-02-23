@@ -8,7 +8,6 @@ import de.hybris.platform.cms2.model.site.CMSSiteModel;
 import de.hybris.platform.cms2.servicelayer.services.CMSSiteService;
 import de.hybris.platform.commerceservices.enums.SiteTheme;
 import de.hybris.platform.commerceservices.enums.UiExperienceLevel;
-import org.springframework.beans.factory.annotation.Required;
 
 
 public class SiteThemeResolverUtils
@@ -60,7 +59,7 @@ public class SiteThemeResolverUtils
 	/**
 	 * @param cmsSiteService the CMSSiteService to set
 	 */
-	@Required public void setCmsSiteService(final CMSSiteService cmsSiteService)
+	public void setCmsSiteService(final CMSSiteService cmsSiteService)
 	{
 		this.cmsSiteService = cmsSiteService;
 	}
@@ -70,7 +69,7 @@ public class SiteThemeResolverUtils
 		return uiExperienceService;
 	}
 
-	@Required public void setUiExperienceService(final UiExperienceService uiExperienceService)
+	public void setUiExperienceService(final UiExperienceService uiExperienceService)
 	{
 		this.uiExperienceService = uiExperienceService;
 	}
@@ -80,7 +79,7 @@ public class SiteThemeResolverUtils
 		return defaultTheme;
 	}
 
-	@Required public void setDefaultTheme(String defaultTheme)
+	public void setDefaultTheme(String defaultTheme)
 	{
 		this.defaultTheme = defaultTheme;
 	}

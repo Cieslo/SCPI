@@ -6,10 +6,9 @@ package de.hybris.platform.yb2bacceleratorstorefront.security;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 import org.springframework.util.PathMatcher;
 
@@ -47,7 +46,6 @@ public class ExcludeUrlRequestMatcher implements RequestMatcher
 		return excludeUrlSet;
 	}
 
-	@Required
 	public void setExcludeUrlSet(final Set<String> excludeUrlSet)
 	{
 		final Set<String> validUrls = new HashSet<String>();
@@ -73,7 +71,6 @@ public class ExcludeUrlRequestMatcher implements RequestMatcher
 		return pathMatcher;
 	}
 
-	@Required
 	public void setPathMatcher(final PathMatcher pathMatcher)
 	{
 		this.pathMatcher = pathMatcher;

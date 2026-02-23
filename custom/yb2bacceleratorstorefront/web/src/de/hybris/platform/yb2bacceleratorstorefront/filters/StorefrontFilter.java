@@ -13,14 +13,13 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Set;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Required;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.PathMatcher;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -85,13 +84,11 @@ public class StorefrontFilter extends OncePerRequestFilter
 				|| !isSessionInitialized(session);
 	}
 
-	@Required
 	public void setStoreSessionFacade(final StoreSessionFacade storeSessionFacade)
 	{
 		this.storeSessionFacade = storeSessionFacade;
 	}
 
-	@Required
 	public void setBrowseHistory(final BrowseHistory browseHistory)
 	{
 		this.browseHistory = browseHistory;
@@ -152,7 +149,6 @@ public class StorefrontFilter extends OncePerRequestFilter
 		return refererExcludeUrlSet;
 	}
 
-	@Required
 	public void setRefererExcludeUrlSet(final Set<String> refererExcludeUrlSet)
 	{
 		this.refererExcludeUrlSet = refererExcludeUrlSet;
@@ -163,7 +159,6 @@ public class StorefrontFilter extends OncePerRequestFilter
 		return pathMatcher;
 	}
 
-	@Required
 	public void setPathMatcher(final PathMatcher pathMatcher)
 	{
 		this.pathMatcher = pathMatcher;

@@ -11,7 +11,7 @@ import de.hybris.platform.yb2bacceleratorstorefront.security.CsrfProtectionMatch
 import java.util.ArrayList;
 import java.util.List;
 
-import org.fest.assertions.Assertions;
+import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

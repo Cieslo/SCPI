@@ -6,7 +6,7 @@
  If the first facet is the category facet, then only that facet is shown. Otherwise the full facet nav is shown.
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
 
 <c:choose>
