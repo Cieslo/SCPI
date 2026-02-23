@@ -1,85 +1,149 @@
 {
-    "commerceSuiteVersion" : "2211.39",
+    "commerceSuiteVersion" : "2211-jdk21",
     "extensionPacks" : [
     {
         "name" : "hybris-commerce-integrations",
-        "version" : "2211.30"
+        "version" : "2211-jdk21.5"
     }
     ],
     "extensions": [
-       "ordermanagementaddon",
-      "orderselfserviceaddon",
-      "ordermanagementwebservices",
-      "b2bordermanagementwebservices",
-      "warehousing",
-      "warehousingbackoffice",
-      "warehousingwebservices",
-      "adaptivesearchsolr",
-      "adaptivesearchbackoffice",
-      "adaptivesearchsamplesaddon",
-      "b2bcommercebackoffice",
-      "commerceservicesbackoffice",
-      "yacceleratorcockpits",
-      "yacceleratorinitialdata",
-      "yacceleratorordermanagement",
-      "yacceleratorstorefront",
-      "yaddon",
-      "ycommercewebservices",
-      "powertoolsstore",
-      "solrserver",
-      "acceleratorwebservicesaddon",
-      "b2bacceleratoraddon",
-      "commerceorgaddon",
-      "commerceorgsamplesaddon",
-      "assistedservicestorefront",
-      "assistedservicewebservices",
-      "customerticketingaddon",
-      "customersupportbackoffice",
-      "ticketsystembackoffice",
-      "consignmenttrackingbackoffice",
-      "rulebuilderbackoffice",
-      "couponbackoffice",
-      "droolsruleengineservices",
-      "couponfacades",
-      "consignmenttrackingaddon",
-      "pcmbackofficesamplesaddon",
-      "consignmenttrackingoccaddon",
-      "apiregistryservices",
-      "apiregistrybackoffice",
-      "odata2webservices",
-      "outboundsync",
-      "outboundsyncbackoffice",
-      "integrationmonitoringbackoffice",
-      "integrationbackoffice",
-      "sapcoreaddon",
-      "sapcoreconfigurationbackoffice",
-      "sapmodelbackoffice",
-      "sapcustomerb2bbackoffice",
-      "ysapcpiomsfulfillment",
-      "sapcpiadapter",
-      "sapcpicustomerexchange",
-      "sapcpicustomerexchangeb2b",
-      "sapcpiorderexchangeoms",
-      "sapcpiorderexchangeomsb2b",
-      "saporderexchangebackoffice",
-      "sapcpiproductexchange"
+       "yb2bacceleratorstorefront",
+        "adaptivesearch",
+        "adaptivesearchbackoffice",
+        "adaptivesearchfacades",
+        "adaptivesearchsamplesaddon",
+        "adaptivesearchsolr",
+        "adaptivesearchwebservices",
+        "apiregistrybackoffice",
+        "apiregistryservices",
+        "b2bacceleratoraddon",
+        "b2bacceleratorfacades",
+        "b2bacceleratorservices",
+        "b2bocc",
+        "b2bwebservicescommons",
+        "commerceorgaddon",
+        "commerceorgsamplesaddon",
+        "powertoolsstore",
+        "accountsummaryaddon",
+        "b2bapprovalprocess",
+        "b2bapprovalprocessfacades",
+        "b2bcommerce",
+        "b2bcommercebackoffice",
+        "b2bcommercefacades",
+        "electronicsstore",
+        "pcmbackofficesamplesaddon",
+        "mediaconversionbackoffice",
+        "pcmbackoffice",
+        "backoffice",
+        "backofficesolrsearch",
+        "platformbackoffice",
+        "ybackoffice",
+        "yacceleratorbackoffice",
+        "yacceleratorcore",
+        "yacceleratorfacades",
+        "yacceleratorinitialdata",
+        "yacceleratorstorefront",
+        "basecommerce",
+        "basecommercebackoffice",
+        "customerreview",
+        "payment",
+        "promotions",
+        "promotionsbackoffice",
+        "voucher",
+        "voucherbackoffice",
+        "commercefacades",
+        "commerceservices",
+        "commerceservicesbackoffice",
+        "commercewebservices",
+        "commercewebservicescommons",
+        "acceleratorbackoffice",
+        "acceleratorcms",
+        "acceleratorfacades",
+        "acceleratorocc",
+        "acceleratorservices",
+        "acceleratorstorefrontcommons",
+        "acceleratorwebservicesaddon",
+        "addonsupport",
+        "couponbackoffice",
+        "couponfacades",
+        "couponservices",
+        "couponwebservices",
+        "inboundservices",
+        "integrationbackoffice",
+        "integrationmonitoringbackoffice",
+        "integrationservices",
+        "odata2services",
+        "odata2webservices",
+        "outboundservices",
+        "outboundsync",
+        "outboundsyncbackoffice",
+        "npmancillary",
+        "warehousing",
+        "warehousingbackoffice",
+        "warehousingfacades",
+        "yacceleratorordermanagement",
+        "adminapi",
+        "auditreportservices",
+        "embeddedserver",
+        "groovynature",
+        "springintegrationlibs",
+        "tomcatembeddedserver",
+        "promotionenginebackoffice",
+        "promotionengineservices",
+        "droolsruleengineservices",
+        "ordercalculation",
+        "rulebuilderbackoffice",
+        "ruledefinitions",
+        "ruleengine",
+        "ruleenginebackoffice",
+        "ruleengineservices",
+        "solrfacetsearch",
+        "solrfacetsearchbackoffice",
+        "solrserver",
+        "cmssmartedit",
+        "cmssmarteditwebservices",
+        "smartedit",
+        "smarteditaddon",
+        "smarteditwebservices",
+        "cms2",
+        "cms2lib",
+        "cmsbackoffice",
+        "cmscockpit",
+        "cmsfacades",
+        "cmsocc",
+        "cmswebservices",
+        "previewwebservices",
+        "saporderexchangebackoffice",
+        "sapcoreaddon",
+        "sapcoreconfigurationbackoffice",
+        "sapmodelbackoffice",
+        "sapcpiadapter",
+        "sapcpicustomerexchange",
+        "sapcpicustomerexchangeb2b",
+        "sapcpiorderexchange",
+        "sapcpiorderexchangeb2b",
+        "sapcpiproductexchange",
+        "sapcpiorderexchangeoms",
+        "sapcpiorderexchangeomsb2b",
+        "ysapcpiomsfulfillment"
+
    ],   
 "properties": [
     {
         "key": "keygen.customer.sap_customer_id.start",
-        "value": "9001008000"
+        "value": "0000490000"
     },
     {
         "key": "keygen.customer.sap_contact_id.start",
-        "value": "9001008000"
+        "value": "0000490000"
     },
     {
         "key": "keygen.order.code.start",
-        "value": "0006400999"
+        "value": "0000490000"
     },
     {
         "key":"keygen.customer.sap_b2b_contact_id.start",
-        "value": "9001008000"
+        "value": "0000590000"
     },
     {
         "key": "apcustomerexchange.outbound.datahub.feed",
@@ -115,39 +179,42 @@
     },
     {
         "key":"website.electronics.http",
-        "value":"http://electronics.clwfyft1x1-scpiprodu1-d3-public.model-t.cc.commerce.ondemand.com/"
+        "value":"${ccv2.services.accstorefront.url.0}/yacceleratorstorefront"
     },
     {
         "key":"website.electronics.https",
-        "value":"https://electronics.clwfyft1x1-scpiprodu1-d3-public.model-t.cc.commerce.ondemand.com/"
+        "value":"${ccv2.services.accstorefront.url.0}/yacceleratorstorefront"
     },
     {
         "key":"website.powertools.http",
-        "value":"http://powertools.clwfyft1x1-scpiprodu1-d3-public.model-t.cc.commerce.ondemand.com/"
+        "value":"${ccv2.services.accstorefront.url.1}/yb2bacceleratorstorefront"
     },
     {
         "key":"website.powertools.https",
-        "value":"https://powertools.clwfyft1x1-scpiprodu1-d3-public.model-t.cc.commerce.ondemand.com/"
+        "value":"${ccv2.services.accstorefront.url.1}/yb2bacceleratorstorefront"
     }
 ],
 "storefrontAddons": [
     {
         "addons":[
-            "b2bacceleratoraddon",
-            "commerceorgaddon",
-            "commerceorgsamplesaddon",
-            "customerticketingaddon",
+            "acceleratorwebservicesaddon",
+            "accountsummaryaddon",
             "adaptivesearchsamplesaddon",
+            "b2bacceleratoraddon",
             "pcmbackofficesamplesaddon",
-            "ordermanagementaddon",
-            "orderselfserviceaddon",
-            "consignmenttrackingaddon",
-            "sapcoreaddon",
-            "assistedservicestorefront"]
+            "sapcoreaddon"]
         ,
-        "storefronts": ["yacceleratorstorefront"],
+        "storefronts": ["yacceleratorstorefront","yb2bacceleratorstorefront"],
         "template": "yacceleratorstorefront"
         
+    },
+    {
+        "addons":[
+            "b2bacceleratoraddon",
+            "commerceorgaddon"]
+        ,
+        "storefronts": ["yb2bacceleratorstorefront"],
+        "template": "yacceleratorstorefront"
     }
 ],
 "aspects": [
@@ -202,8 +269,13 @@
             },
             {
                 "key":"storefrontContextRoot",
+                "value": "yacceleratorstorefront"
+            },
+            {
+                "key":"b2bstorefrontContextRoot",
                 "value": ""
             }
+
         ],
         "webapps": [
             {
@@ -213,6 +285,10 @@
             {
                  "name": "yacceleratorstorefront",
                 "contextPath": ""
+            },
+            {
+                 "name": "yb2bacceleratorstorefront",
+                "contextPath": "/yb2bacceleratorstorefront"
             },
             {
                 "name": "acceleratorservices",
