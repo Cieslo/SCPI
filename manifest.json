@@ -119,8 +119,6 @@
         "sapcpiadapter",
         "sapcpicustomerexchange",
         "sapcpicustomerexchangeb2b",
-        "sapcpiorderexchange",
-        "sapcpiorderexchangeb2b",
         "sapcpiproductexchange",
         "sapcpiorderexchangeoms",
         "sapcpiorderexchangeomsb2b",
@@ -195,25 +193,10 @@
 ],
 "storefrontAddons": [
     {
-        "addons":[
-            "acceleratorwebservicesaddon",
-            "accountsummaryaddon",
-            "adaptivesearchsamplesaddon",
-            "b2bacceleratoraddon",
-            "pcmbackofficesamplesaddon",
-            "sapcoreaddon"]
-        ,
+        "addons":["acceleratorwebservicesaddon","accountsummaryaddon","adaptivesearchsamplesaddon","b2bacceleratoraddon","pcmbackofficesamplesaddon","sapcoreaddon"],
         "storefronts": ["yacceleratorstorefront","yb2bacceleratorstorefront"],
         "template": "yacceleratorstorefront"
         
-    },
-    {
-        "addons":[
-            "b2bacceleratoraddon",
-            "commerceorgaddon"]
-        ,
-        "storefronts": ["yb2bacceleratorstorefront"],
-        "template": "yacceleratorstorefront"
     }
 ],
 "aspects": [
