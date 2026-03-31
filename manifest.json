@@ -16,7 +16,6 @@
         "adaptivesearchwebservices",
         "apiregistrybackoffice",
         "apiregistryservices",
-        "b2bacceleratoraddon",
         "b2bacceleratorfacades",
         "b2bacceleratorservices",
         "b2bocc",
@@ -80,6 +79,7 @@
         "warehousingbackoffice",
         "warehousingfacades",
         "yacceleratorordermanagement",
+        "commerceorgaddon",
         "adminapi",
         "auditreportservices",
         "embeddedserver",
@@ -191,7 +191,7 @@
 ],
 "storefrontAddons": [
     {
-        "addons":["acceleratorwebservicesaddon","accountsummaryaddon","adaptivesearchsamplesaddon","b2bacceleratoraddon","pcmbackofficesamplesaddon","sapcoreaddon"],
+        "addons":["acceleratorwebservicesaddon","accountsummaryaddon","adaptivesearchsamplesaddon","commerceorgaddon","pcmbackofficesamplesaddon","sapcoreaddon"],
         "storefronts": ["yacceleratorstorefront","yb2bacceleratorstorefront"],
         "template": "yacceleratorstorefront"
         
