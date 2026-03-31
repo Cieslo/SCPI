@@ -21,8 +21,6 @@
         "b2bacceleratorservices",
         "b2bocc",
         "b2bwebservicescommons",
-        "commerceorgaddon",
-        "commerceorgsamplesaddon",
         "powertoolsstore",
         "accountsummaryaddon",
         "b2bapprovalprocess",
@@ -247,15 +245,19 @@
             },
             {
                 "key": "spring.session.yacceleratorstorefront.cookie.path",
-                "value": "/"
+                "value": "/yacceleratorstorefront"
+            },
+            {
+                "key": "spring.session.yb2bacceleratorstorefront.cookie.path",
+                "value": "/yb2bacceleratorstorefront"
             },
             {
                 "key":"storefrontContextRoot",
-                "value": "yacceleratorstorefront"
+                "value": "/yacceleratorstorefront"
             },
             {
                 "key":"b2bstorefrontContextRoot",
-                "value": ""
+                "value": "/yb2bacceleratorstorefront"
             }
 
         ],
@@ -266,7 +268,7 @@
             },
             {
                  "name": "yacceleratorstorefront",
-                "contextPath": ""
+                "contextPath": "/yacceleratorstorefront"
             },
             {
                  "name": "yb2bacceleratorstorefront",
